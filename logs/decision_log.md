@@ -181,3 +181,31 @@ Project documentation may report the empirical p-values and percentile results, 
 
 Open questions:
 Whether later null-control runs should increase iteration counts or add alternative baselines.
+
+## 2026-06-21 - Treat exp-005 as evidence of non-random section-label structure
+
+Decision:
+Treat `exp-005` as evidence that IVTFF `$I` section labels preserve non-random token-frequency structure under the tested pooled-label null model.
+
+Reason:
+All 28 observed pairwise section JSD values were above the 97.5% null quantile, all 28 `exp-004` pairwise matched references were above the 97.5% matched null quantile, and the global observed mean pairwise JSD exceeded the global null distribution.
+
+Consequences:
+Project summaries may describe the section signal as non-random under this tested null model, but they must still avoid claims about meaning, translation, language identity, authorship, or decipherment.
+
+Open questions:
+Which metadata factors account for the preserved section-label signal.
+
+## 2026-06-21 - Prioritize Currier and hand interaction controls after exp-005
+
+Decision:
+Treat the source of the section signal as unresolved and prioritize Currier-language and scribal-hand controls before stronger claims about section structure.
+
+Reason:
+`exp-005` strengthens the case that the section signal is not a token-count artifact or a trivial random-label effect, but it does not distinguish section labels from possible confounders such as Currier language, hand, layout, or folio structure.
+
+Consequences:
+The recommended next experiment is `exp-006_currier-section-interaction-control` when Currier metadata is available or easiest to reproduce, with `exp-006_hand-section-interaction-control` as an alternative or follow-up.
+
+Open questions:
+Whether Currier language or hand explains most of the currently observed section signal.

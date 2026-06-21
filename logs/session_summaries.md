@@ -210,19 +210,71 @@ Recommended next experiment:
 Purpose:
 Test whether observed and pairwise matched section JSD values are larger than expected under random section-label assignment.
 
-## 2026-06-21 - exp-005 section-label null control
+## 2026-06-21 - exp-005 consolidation
 
-Context:
-`exp-004` showed that section-frequency differences remain measurable after token-count matching, but it did not test whether those distances were larger than expected under random section-label assignment.
+### Scope
 
-What was done:
-Added `scripts/exp005_section_label_null_control.py`, reused the cleaned `exp-002b` parser policy and the `exp-003` / `exp-004` folio-to-section mapping, ran 1000-iteration pooled-label null controls on transcriber code `H`, and generated pairwise full-size, pairwise matched-size, and global section-label permutation outputs under `artifacts/exp005/`.
+Summarize:
 
-Results:
-The run completed without runtime errors. All 5,216 selected `H` lines mapped to section metadata. For all 28 section pairs, observed full-section JSD was above the 97.5% pooled-label null quantile. For all 28 pairs, the `exp-004` pairwise matched reference JSD was also above the 97.5% matched null quantile. The observed `exp-003` mean pairwise JSD was 0.5554700431523788, compared with a global null mean of 0.3788255370327812 and null 97.5% quantile 0.38500785795761844.
+- `exp-005_section-label-null-control`
+- its relationship to `exp-003_section-frequency-comparison`
+- its relationship to `exp-004_section-frequency-resampling-control`
+- implications for the next source-of-signal experiments
 
-Open questions:
-How much of the section-label signal survives after controlling for Currier language, hand, line position, or other metadata? Which constrained null models should be tried next?
+### Observations
 
-Next actions:
-Design a follow-up that stratifies or constrains the null model by Currier language, hand, or related metadata before stronger interpretation of the section signal.
+OBS:
+- `exp-005` ran section-label null controls with 1000 iterations and seed 20260621.
+- `exp-005` used transcriber code `H` and the cleaned parser policy from `exp-002b`.
+- `exp-005` reused the section mapping logic from `exp-003` / `exp-004`.
+- All selected `H` lines were mapped to sections; unmapped selected lines = 0.
+- All 28 observed pairwise section JSD values were above the 97.5% null quantile.
+- All 28 `exp-004` pairwise matched reference JSD values were above the 97.5% matched null quantile.
+- Global observed mean pairwise JSD was 0.5554700431523788.
+- Global null mean was 0.3788255370327812.
+- Global null 97.5% quantile was 0.38500785795761844.
+
+### Interpretations
+
+INF:
+- Random section-label assignment did not reproduce the observed section-level token-frequency distances.
+- The section-level token-frequency signal is stronger than expected under this tested null model.
+- Combined with `exp-003` and `exp-004`, this makes the section signal more robust as an observed statistical property of the cleaned transcription data.
+- The result still does not explain the source of the signal.
+
+### Hypotheses / Open Possibilities
+
+HYP:
+- IVTFF `$I` section labels preserve non-random token-frequency information.
+- Some section-level variation may reflect Currier language, scribal hand, folio or quire structure, layout, metadata, transcription effects, or a combination of factors.
+- The section signal may be partly indirect rather than caused by section or topic categories alone.
+
+### Limitations
+
+TODO / ERR:
+- Do not treat null-control results as evidence of meaning, translation, language identity, authorship, or decipherment.
+- Do not mark any hypothesis as confirmed or rejected.
+- Empirical p-values are limited by the 1000-iteration setup.
+- The source of the section-level signal remains unresolved.
+- Currier-language and hand controls are needed before stronger interpretation.
+
+### Current Research State
+
+The section-level token-frequency signal is:
+
+- reproducible under the cleaned parser
+- robust to token-count matching
+- stronger than expected under random section-label assignment
+
+However, the source of the signal is not yet known.
+
+### Next Recommended Experiment
+
+Recommended next experiment:
+`exp-006_currier-section-interaction-control`
+
+Purpose:
+Test whether the IVTFF `$I` section-level token-frequency signal remains after controlling for Currier language categories, or whether the section signal is largely explained by Currier A/B distribution.
+
+Alternative / follow-up:
+`exp-006_hand-section-interaction-control`

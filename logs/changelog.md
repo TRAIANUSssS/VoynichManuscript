@@ -75,3 +75,9 @@
 - Created `experiments/exp-005_section-label-null-control_active_2026-06-21/` with protocol, results, findings, artifact index, and questions.
 - Updated project navigation, script/artifact indexes, decision log, and session summary.
 - Preserved all earlier experiment directories and artifacts unchanged.
+
+## 2026-06-21 - Consolidated exp-005 project-level summary
+
+- Replaced the brief `exp-005` session entry with a milestone-level consolidation summary in OBS/INF/HYP/TODO form.
+- Recorded that the section signal is non-random under the tested pooled-label null model, while its source remains unresolved.
+- Recorded `exp-006_currier-section-interaction-control` as the recommended next experiment, with hand interaction as an alternative or follow-up.

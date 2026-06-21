@@ -63,6 +63,8 @@ Initial hypotheses are open concepts, not conclusions.
 
 ## Next Steps
 
-- Next follow-up: control section comparisons and null models for Currier language, hand, line position, and folio/quire structure.
-- Optional method follow-up: add constrained null models within Currier language, hand, or quire structure.
+- Recommended next experiment: `exp-006_currier-section-interaction-control`.
+- Purpose: test whether the IVTFF `$I` section-level token-frequency signal remains after controlling for Currier language categories, or whether the current section signal is largely explained by Currier A/B distribution.
+- Alternative / follow-up: `exp-006_hand-section-interaction-control`.
+- Later follow-up: control section comparisons and null models for line position, folio structure, and quire structure.
 - Add verified sources for manuscript background notes.
