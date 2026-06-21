@@ -1,1 +1,8 @@
-/logs
+# keep research logs versioned
+!/logs/
+!/logs/*.md
+
+# ignore only local/runtime logs if needed
+/logs/local/
+/logs/*.tmp
+/logs/*.log
