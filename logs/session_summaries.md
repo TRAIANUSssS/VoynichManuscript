@@ -155,19 +155,57 @@ Open questions:
 Next actions:
 ...
 
-## 2026-06-21 - exp-004 section-frequency resampling control
+## 2026-06-21 - exp-004 consolidation
 
-Context:
-`exp-003` found measurable section-level token-frequency differences, but the section token counts were highly uneven and needed matched-token-count controls before interpretation.
+### Scope
 
-What was done:
-Added `scripts/exp004_section_frequency_resampling_control.py`, reused the cleaned `exp-002b` parser policy and the `exp-003` folio-to-section metadata, ran 1,000-iteration common-size and pairwise matched-size resampling controls on transcriber code `H`, and created the `exp-004` experiment documentation and artifact set.
+Summarize:
 
-Results:
-The run completed without runtime errors. All 5,216 selected `H` lines mapped to section metadata. The global common sample size was 850 tokens. Observed `exp-003` mean pairwise JSD was 0.5554700431523788 bits; `exp-004` common-size mean pairwise JSD was 0.6479551071976217 bits; pairwise matched mean pairwise JSD was 0.5870200377032155 bits. The smallest and largest section pairs remained `biological` vs `stars` and `astronomical` vs `biological`.
+- `exp-004_section-frequency-resampling-control`
+- its relationship to `exp-003_section-frequency-comparison`
+- implications for the next control experiment
 
-Open questions:
-How much of the remaining section signal is explained by Currier language, hand, line position, or other metadata? Should pairwise matched-size JSD become the default pair-specific control? Should a pooled-label null control be required for stronger inference?
+### Observations
 
-Next actions:
-Add Currier-language and hand interaction controls, then consider a pooled-label null control for section-pair JSD.
+OBS:
+- `exp-004` ran matched-token-count resampling with 1000 iterations and seed 20260621.
+- `exp-004` reused the cleaned `exp-002b` parser policy and the `exp-003` folio-to-section mapping from `data/metadata/folio_sections.csv`.
+- Observed `exp-003` mean pairwise section JSD was 0.5554700431523788 bits.
+- `exp-004` common-size mean pairwise JSD was 0.6479551071976217 bits.
+- `exp-004` pairwise matched mean pairwise JSD was 0.5870200377032155 bits.
+- Section-level differences remained measurable after token-count matching.
+- The closest pair remained `biological` vs `stars`.
+- The most distant pair remained `astronomical` vs `biological`.
+- The common-size control reduced all sections to the smallest available section size, which was `astronomical` at 850 tokens.
+- The pooled-label null control was not implemented in `exp-004`.
+
+### Interpretations
+
+INF:
+- Uneven section token counts do not fully explain the section-frequency differences observed in `exp-003`.
+- The common-size control is harsher because it forces all comparisons to the 850-token floor, which can inflate distances under sparse small-sample comparisons.
+- Pairwise matched-size control is more useful for future pairwise section comparisons because it uses the maximum fair sample size for each pair.
+- The section-level signal is more robust after `exp-004`, but its cause remains unresolved.
+
+### Hypotheses / Open Possibilities
+
+HYP:
+- Some section-level frequency differences may reflect real structural differences in the transcription data.
+- Remaining differences may still be influenced by Currier language, scribal hand, folio or quire structure, layout, metadata, or transcription effects.
+- Section categories may preserve a signal, but `exp-004` does not identify what produces that signal.
+
+### Limitations
+
+TODO / ERR:
+- Do not treat resampling robustness as evidence of meaning, translation, language identity, authorship, or decipherment.
+- Do not treat section differences as explained.
+- Pooled-label null control was not implemented in `exp-004`.
+- A null model is needed before stronger inferential claims about section structure.
+
+### Next Recommended Experiment
+
+Recommended next experiment:
+`exp-005_section-label-null-control`
+
+Purpose:
+Test whether observed and pairwise matched section JSD values are larger than expected under random section-label assignment.

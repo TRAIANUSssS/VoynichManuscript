@@ -61,6 +61,7 @@ Initial hypotheses are open concepts, not conclusions.
 
 ## Next Steps
 
-- Next follow-up: control section comparisons for Currier language, hand, line position, and folio/quire structure.
-- Optional method follow-up: add a pooled-label null control for section-pair JSD.
+- Recommended next experiment: `exp-005_section-label-null-control`.
+- Purpose: test whether observed and pairwise matched section JSD values are larger than expected under random section-label assignment.
+- Later follow-up: control section comparisons for Currier language, hand, line position, and folio/quire structure.
 - Add verified sources for manuscript background notes.

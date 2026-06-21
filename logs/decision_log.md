@@ -125,3 +125,31 @@ Future section-comparison writeups should report which control they use and shou
 
 Open questions:
 Whether a pooled-label null control should become a required companion to pairwise matched-size JSD.
+
+## 2026-06-21 - Treat exp-004 resampling robustness as non-explanatory
+
+Decision:
+Treat the `exp-004` result as evidence that section-frequency differences are robust to token-count matching, but not as evidence that the cause of the section signal has been identified.
+
+Reason:
+`exp-004` showed that section differences remained measurable after matched-token-count resampling, but it did not control for random section-label assignment, Currier language, hand, layout, or other metadata confounders.
+
+Consequences:
+Project-level summaries may state that uneven section token counts do not fully explain the `exp-003` signal, but they must not present the section signal as explained, causal, or semantically meaningful.
+
+Open questions:
+How much of the remaining signal survives after null-control, Currier-language, hand, and line-position controls.
+
+## 2026-06-21 - Recommend exp-005 section-label null control
+
+Decision:
+Use `exp-005_section-label-null-control` as the recommended next experiment after `exp-004`.
+
+Reason:
+`exp-004` answered whether section differences remain visible after matched token-count resampling, but it did not answer whether the observed or pairwise matched distances are larger than expected under random section-label assignment.
+
+Consequences:
+Future work should add a label-randomized null model before stronger inferential claims about section structure. `exp-005` should focus on observed-versus-null and pairwise-matched-versus-null section JSD comparisons rather than on new interpretive claims.
+
+Open questions:
+Whether the null-control design should use pooled pairwise permutations only, a global label shuffle, or both.
