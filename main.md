@@ -10,7 +10,7 @@ The goal is to create a durable research memory. The project should preserve obs
 
 ## Current Status
 
-Status: baseline, line-position, cleaned-parser, and section-frequency experiments completed on 2026-06-21.
+Status: baseline, line-position, cleaned-parser, and section-frequency experiments completed and consolidated on 2026-06-21.
 
 Initial raw transcription source has been added for `exp-001`: `data/raw/LSI_ivtff_0d.txt`, documented in `datasets/voynich_sources.md` and `methods/transcription_policy.md`.
 
@@ -55,9 +55,11 @@ Initial hypotheses are open concepts, not conclusions.
 - 2026-06-21: Keep single-token lines as a separate position class in `exp-002`.
 - 2026-06-21: For cleaned IVTFF parsing, replace inline `<...>` markup with token boundaries before normalization.
 - 2026-06-21: Use IVTFF `$I` page-header illustration type as the source-derived section metadata for `exp-003`.
+- 2026-06-21: Treat `exp-003` section-frequency results as exploratory until matched-token-count resampling or bootstrap controls are run.
 
 ## Next Steps
 
-- Decide whether IVTFF `$I` categories should become the repository's standard section taxonomy.
-- Run a follow-up that controls section comparisons for Currier language, hand, and section sample size.
+- Recommended next experiment: `exp-004_section-frequency-resampling-control`.
+- Test whether `exp-003` section-frequency differences remain visible after matched-token-count resampling or bootstrap controls.
+- Later follow-up: control section comparisons for Currier language, hand, line position, and folio/quire structure.
 - Add verified sources for manuscript background notes.

@@ -85,6 +85,59 @@ The section labels are IVTFF illustration-type metadata, not an independently ve
 Next actions:
 Run a controlled section comparison using Currier language and hand metadata, or add matched-size resampling before interpreting section differences.
 
+## 2026-06-21 - exp-002 to exp-003 consolidation
+
+### Scope
+
+Summarize the completed sequence:
+
+- `exp-002_word-position-patterns`
+- `exp-002b_clean-ivtff-parser-rerun`
+- `exp-003_section-frequency-comparison`
+
+### Observations
+
+OBS:
+- `exp-002` found measurable line-position token-distribution differences between `line_initial`, `line_medial`, `line_final`, and `single_token_line` classes.
+- `exp-002` also exposed parser contamination from IVTFF inline angle-tag markup entering normalized token text.
+- `exp-002b` removed inline angle tags from normalized token text and reran baseline and position comparisons with the cleaned parser policy.
+- `exp-002b` removed 4,467 inline angle tags from 2,229 selected `H` lines, with 111 unique angle-tag forms removed.
+- Parser cleanup reduced but did not remove position-distribution differences: `line_initial_vs_line_medial` changed from 0.529873240757701 to 0.5052142842100613 JSD bits; `line_final_vs_line_medial` changed from 0.5310279149774855 to 0.43994932334109943; `line_initial_vs_line_final` changed from 0.7331851577131896 to 0.674520700840175.
+- `exp-003` mapped all 5,216 selected `H` lines to IVTFF `$I` section categories.
+- `exp-003` found measurable section-level token-frequency differences: mean pairwise section JSD was 0.5554700431523788 bits, with minimum 0.3347291601069759 for `biological` vs `stars` and maximum 0.7132735389659056 for `astronomical` vs `biological`.
+
+### Interpretations
+
+INF:
+- The original `exp-002` signal was partly affected by parser artifacts.
+- The cleaned parser result suggests that line position remains a structural factor in the cleaned transcription data.
+- IVTFF `$I` section categories differ by token-frequency profile, but the cause is not yet identified.
+- Section-level variation is exploratory because sample sizes are uneven and confounders are uncontrolled.
+- The mean section JSD from `exp-003` is close to the mean cleaned position-class JSD from `exp-002b`, so section-level variation is currently comparable in magnitude to line-position variation in this exploratory setup.
+
+### Hypotheses / Open Possibilities
+
+HYP:
+- Some token distributions may be influenced by line position.
+- Some token distributions may vary by IVTFF `$I` section category.
+- Section effects may partly reflect Currier language, hand, layout, sample size, or metadata effects rather than section/topic alone.
+
+### Limitations
+
+TODO / ERR:
+- Do not treat section differences as evidence of meaning, translation, language identification, authorship, or decipherment.
+- Do not compare TTR naively across uneven section sizes.
+- Do not interpret section-distance magnitudes until matched-token-count resampling or bootstrap controls are run.
+- Continue using the cleaned IVTFF parser policy unless a later protocol explicitly replaces it.
+
+### Next Recommended Experiment
+
+Recommended next experiment:
+`exp-004_section-frequency-resampling-control`
+
+Purpose:
+Test whether section-level token-frequency differences from `exp-003` remain visible after matched-token-count resampling or bootstrap controls.
+
 ## Template
 
 Context:

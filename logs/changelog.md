@@ -46,3 +46,10 @@
 - Generated `artifacts/exp003/` section summaries, token tables, overrepresentation tables, pairwise distances, section-vs-position comparisons, unmapped-line audit, and plots.
 - Created `experiments/exp-003_section-frequency-comparison_active_2026-06-21/`.
 - Updated section knowledge, project navigation, script/artifact indexes, decision log, and session summary.
+
+## 2026-06-21 - Consolidated exp-002 to exp-003 research iteration
+
+- Added a project-level session summary covering `exp-002`, `exp-002b`, and `exp-003`.
+- Recorded that cleaned parser policy remains the recommended default for future text-statistics experiments unless a later protocol replaces it.
+- Recorded that `exp-003` section-frequency results are exploratory until matched-token-count resampling or bootstrap controls are run.
+- Recorded `exp-004_section-frequency-resampling-control` as the recommended next experiment without creating `exp-004`.

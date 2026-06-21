@@ -83,3 +83,31 @@ The run can distinguish corpus coverage from section-level results. In the first
 
 Open questions:
 Future metadata joins should use the same explicit unmapped-line reporting unless a later protocol replaces it.
+
+## 2026-06-21 - Treat exp-003 section distances as exploratory until resampling
+
+Decision:
+Treat `exp-003` section-frequency differences as exploratory until a matched-token-count resampling or bootstrap control is run.
+
+Reason:
+`exp-003` section token counts are uneven, and section-level differences may be affected by sample size, Currier language, hand, layout, line position, or metadata effects.
+
+Consequences:
+Project summaries may report the observed section-distance values, but they should not interpret section differences as evidence of meaning, language identity, cipher structure, authorship, translation, or decipherment.
+
+Open questions:
+Whether section-level differences remain stable under matched-token-count resampling.
+
+## 2026-06-21 - Recommend exp-004 section-frequency resampling control
+
+Decision:
+Use `exp-004_section-frequency-resampling-control` as the recommended next experiment before interpreting section-level differences.
+
+Reason:
+The next methodological need is to test whether the `exp-003` section-frequency distances persist when section sample sizes are controlled.
+
+Consequences:
+Do not create `exp-004` until a task packet or explicit instruction requests it. The recommendation is recorded for future planning only.
+
+Open questions:
+Which resampling design, number of bootstrap iterations, and comparison metrics should be used.
