@@ -2,35 +2,48 @@
 
 ## Current Transcription
 
-Current transcription: not selected.
+Current experiment transcription for `exp-001`: IVTFF EVA interlinear transcription, local file `data/raw/LSI_ivtff_0d.txt`.
+
+Source URL: https://www.voynich.nu/data/beta/LSI_ivtff_0d.txt
+
+Source documentation: https://www.voynich.nu/transcr.html
+
+Scope note: this is an experiment-level choice for `exp-001`, not a final project-wide transcription default.
 
 ## Version
 
-No transcription version has been selected.
+Source file header: `#=IVTFF Eva- 1.5`
+
+Source file comments include: release `1.6e6 - ?? Dec 1998`; last edited notes from December 1998. Treat exact version status as `needs-verification` against current IVTFF documentation.
 
 ## Normalization
 
-TODO: Define normalization only after selecting a transcription.
+For `exp-001` only:
+
+- select IVTFF data lines ending in transcriber code `;H>`;
+- remove inline `{...}` comments;
+- split tokens on periods, commas, and whitespace;
+- lowercase tokens;
+- remove non-ASCII-letter uncertain/editorial marks before counting.
 
 ## Tokenization
 
-TODO: Define token boundaries before running text statistics.
+For `exp-001`, token boundaries are periods, commas, and whitespace after comment removal.
 
 ## Line Breaks
 
-TODO: Decide whether line breaks are preserved in the first analysis.
+For `exp-001`, line breaks are not modeled as features. The parser counts selected lines for run metadata only.
 
 ## Folio Metadata
 
-TODO: Decide how folio metadata will be stored and joined to token data.
+For `exp-001`, folio metadata is not joined to token data.
 
 ## Uncertain Glyphs
 
-TODO: Define representation for uncertain glyphs and damaged text.
+For `exp-001`, uncertain/editorial marks are stripped. This is a baseline simplification and should be revisited before stronger analysis.
 
 ## Open Decisions
 
-- Which transcription should be used first?
-- Should `exp-001` preserve line and folio boundaries?
-- How should uncertain or editorial transcription marks be handled?
-
+- Should a future protocol use an EVA-aware glyph parser rather than single-character counts?
+- Should later experiments preserve line, folio, section, scribe/hand, and Currier-language metadata?
+- How should uncertain or editorial transcription marks be modeled rather than stripped?

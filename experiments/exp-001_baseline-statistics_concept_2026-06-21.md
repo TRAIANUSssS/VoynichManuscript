@@ -1,7 +1,14 @@
 # exp-001: Baseline Statistics
 
-Status: concept
+Status: superseded
 Created: 2026-06-21
+Superseded: 2026-06-21
+Superseded by: `experiments/exp-001_baseline-statistics_active_2026-06-21/`
+
+## Supersession Note
+
+DEC-2026-06-21-001:
+This concept note is preserved as research history. The active experiment folder now contains the protocol, run results, findings, questions, and artifact index for the first end-to-end baseline statistics run.
 
 ## Goal
 
@@ -22,9 +29,9 @@ Can the project load a documented transcription and produce basic reproducible t
 
 ## Data
 
-Current transcription: not selected.
+Selected for active run: IVTFF EVA interlinear transcription file `data/raw/LSI_ivtff_0d.txt`, analyzed using transcriber code `H`.
 
-Status: `needs-source`
+Status: superseded by active experiment documentation.
 
 ## Planned Metrics
 
@@ -70,4 +77,3 @@ Status: `needs-source`
 - Select a transcription source.
 - Write a protocol before running analysis.
 - Implement a command-line script.
-

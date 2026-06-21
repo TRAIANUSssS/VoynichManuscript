@@ -1,0 +1,47 @@
+{
+  "experiment": "exp-001_baseline-statistics",
+  "run_date_utc": "2026-06-21T17:25:31+00:00",
+  "script": "scripts/exp001_baseline_stats.py",
+  "input": "data/raw/LSI_ivtff_0d.txt",
+  "input_sha256": "3f3f2af18cde10efe75c582f49b07b651c3397022fcbfa5854fecc424c121afa",
+  "output": "artifacts/exp001",
+  "parameters": {
+    "transcriber_code": "H",
+    "token_separators": "period, comma, whitespace",
+    "normalization": "lowercase; remove non-ASCII-letter uncertain/editorial marks",
+    "glyph_counting": "single EVA transcription characters after token normalization"
+  },
+  "parse_stats": {
+    "input_lines": 38939,
+    "data_lines": 17344,
+    "selected_lines": 5216,
+    "discarded_empty_tokens": 38
+  },
+  "metrics": {
+    "token_count": 37118,
+    "unique_token_count": 9051,
+    "type_token_ratio": 0.24384395710975806,
+    "glyph_count": 201527,
+    "unique_glyph_count": 26,
+    "glyph_entropy_bits": 3.9233922700249884,
+    "token_entropy_bits": 10.675741463409675,
+    "mean_token_length": 5.4293604181259765
+  },
+  "artifacts": [
+    "token_frequencies.csv",
+    "glyph_frequencies.csv",
+    "word_length_distribution.csv",
+    "top_tokens.csv",
+    "top_glyphs.csv",
+    "run_summary.json",
+    "word_length_distribution.png",
+    "top_tokens.png",
+    "glyph_frequencies.png"
+  ],
+  "limitations": [
+    "This run uses one IVTFF transcriber code only.",
+    "EVA digraphs such as ch and sh are counted as separate characters in this baseline.",
+    "Uncertain and editorial marks are stripped for counting rather than modeled.",
+    "No comparison corpus, folio metadata, section metadata, or Currier-language split is used."
+  ]
+}

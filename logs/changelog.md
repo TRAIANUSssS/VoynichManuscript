@@ -13,3 +13,12 @@
 - Added source requirements for manuscript, historical, scientific, bibliographic, and theory-status claims.
 - Clarified the distinction between `results.md` and `findings.md`.
 - Clarified when to update `changelog.md`, `decision_log.md`, and `session_summaries.md`.
+
+## 2026-06-21 - Ran exp-001 baseline statistics workflow
+
+- Added raw IVTFF EVA transcription file `data/raw/LSI_ivtff_0d.txt`.
+- Added `scripts/exp001_baseline_stats.py`.
+- Generated `artifacts/exp001/` CSV, JSON, and PNG outputs.
+- Created `experiments/exp-001_baseline-statistics_active_2026-06-21/` with protocol, results, findings, questions, rejected findings, and artifact index.
+- Marked the original `experiments/exp-001_baseline-statistics_concept_2026-06-21.md` as superseded.
+- Updated dataset documentation, transcription policy, project navigation, decision log, and session summary.

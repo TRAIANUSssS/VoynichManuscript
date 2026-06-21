@@ -4,7 +4,15 @@
 
 Raw data should be stored under `data/raw/` and treated as read-only after import.
 
-No raw Voynich data has been added yet.
+Current raw Voynich data:
+
+- `data/raw/LSI_ivtff_0d.txt`
+  - Source: https://www.voynich.nu/data/beta/LSI_ivtff_0d.txt
+  - Source documentation: https://www.voynich.nu/transcr.html
+  - Download date: 2026-06-21
+  - SHA-256: `3f3f2af18cde10efe75c582f49b07b651c3397022fcbfa5854fecc424c121afa`
+  - Used by: `exp-001_baseline-statistics_active_2026-06-21`
+  - License/status: `needs-verification`
 
 ## Processed Data
 
@@ -29,7 +37,5 @@ Each dataset entry should include:
 
 ## TODO
 
-- Select initial Voynich transcription.
-- Document the source and version.
+- Verify license/status for `data/raw/LSI_ivtff_0d.txt`.
 - Define control corpus requirements.
-
