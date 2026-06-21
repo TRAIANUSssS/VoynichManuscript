@@ -1,0 +1,115 @@
+{
+  "experiment": "exp-005_section-label-null-control",
+  "run_date_utc": "2026-06-21T19:33:59+00:00",
+  "script": "scripts/exp005_section_label_null_control.py",
+  "input": "data/raw/LSI_ivtff_0d.txt",
+  "input_sha256": "3f3f2af18cde10efe75c582f49b07b651c3397022fcbfa5854fecc424c121afa",
+  "metadata": "data/metadata/folio_sections.csv",
+  "metadata_created_by_script": false,
+  "metadata_source": "Reuse exp-003/exp-004 folio-to-section mapping derived from IVTFF page headers ($I illustration type).",
+  "output": "artifacts/exp005",
+  "parameters": {
+    "transcriber_code": "H",
+    "iterations": 1000,
+    "seed": 20260621,
+    "min_count": 10,
+    "top_n": 30,
+    "sample_mode": "pairwise-matched",
+    "parser_policy": "cleaned exp-002b policy: remove comments, replace inline <...> markup with token boundaries, split on periods/commas/whitespace, lowercase and strip non-ASCII letters",
+    "pairwise_null_control": "pooled-label, size-matched to observed full section sizes",
+    "pairwise_matched_null_control": "pooled-label, size-matched to exp-004 pairwise matched sample sizes",
+    "global_permutation_control": "all-section pooled-label reassignment preserving section token counts"
+  },
+  "parse_stats": {
+    "input_lines": 38939,
+    "data_lines": 17344,
+    "selected_lines": 5216,
+    "non_empty_selected_lines": 5207,
+    "mapped_selected_lines": 5216,
+    "lines_with_angle_tags": 2229,
+    "angle_tags_removed": 4467,
+    "discarded_empty_tokens": 78,
+    "empty_selected_lines": 9,
+    "unique_angle_tag_forms_removed": 111
+  },
+  "section_count": 8,
+  "sections": [
+    "astronomical",
+    "biological",
+    "cosmological",
+    "herbal",
+    "pharmaceutical",
+    "stars",
+    "text",
+    "zodiac"
+  ],
+  "section_token_counts": [
+    {
+      "section": "astronomical",
+      "line_count": 240,
+      "token_count": 850
+    },
+    {
+      "section": "biological",
+      "line_count": 917,
+      "token_count": 6918
+    },
+    {
+      "section": "cosmological",
+      "line_count": 323,
+      "token_count": 2550
+    },
+    {
+      "section": "herbal",
+      "line_count": 1630,
+      "token_count": 11418
+    },
+    {
+      "section": "pharmaceutical",
+      "line_count": 456,
+      "token_count": 2579
+    },
+    {
+      "section": "stars",
+      "line_count": 1083,
+      "token_count": 10694
+    },
+    {
+      "section": "text",
+      "line_count": 223,
+      "token_count": 1626
+    },
+    {
+      "section": "zodiac",
+      "line_count": 335,
+      "token_count": 1332
+    }
+  ],
+  "historical_observed_exp003_mean_pairwise_jsd_bits": 0.5554700431523788,
+  "historical_exp004_pairwise_matched_mean_pairwise_jsd_bits": 0.5870200377032155,
+  "pairwise_null_control_rows": 28,
+  "pairwise_matched_null_control_rows": 28,
+  "global_section_label_permutation": {
+    "observed_mean_pairwise_jsd_bits": 0.5554700431523788,
+    "null_mean_pairwise_jsd_mean_bits": 0.3788255370327812,
+    "null_mean_pairwise_jsd_std_bits": 0.003030097354796408,
+    "null_mean_pairwise_jsd_median_bits": 0.3788888389830416,
+    "null_mean_pairwise_jsd_q025_bits": 0.37312659371797946,
+    "null_mean_pairwise_jsd_q975_bits": 0.38500785795761844,
+    "observed_minus_null_mean_bits": 0.1766445061195976,
+    "empirical_percentile": 1.0,
+    "empirical_p_value": 0.000999000999000999
+  },
+  "artifacts": [
+    "run_summary.json",
+    "section_token_counts.csv",
+    "pairwise_null_control.csv",
+    "pairwise_null_control.json",
+    "observed_vs_null_jsd.csv",
+    "pairwise_matched_null_control.csv",
+    "pairwise_matched_null_control.json",
+    "global_section_label_permutation.csv",
+    "global_section_label_permutation.json",
+    "unmapped_lines.csv"
+  ]
+}

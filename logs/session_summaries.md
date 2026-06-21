@@ -209,3 +209,20 @@ Recommended next experiment:
 
 Purpose:
 Test whether observed and pairwise matched section JSD values are larger than expected under random section-label assignment.
+
+## 2026-06-21 - exp-005 section-label null control
+
+Context:
+`exp-004` showed that section-frequency differences remain measurable after token-count matching, but it did not test whether those distances were larger than expected under random section-label assignment.
+
+What was done:
+Added `scripts/exp005_section_label_null_control.py`, reused the cleaned `exp-002b` parser policy and the `exp-003` / `exp-004` folio-to-section mapping, ran 1000-iteration pooled-label null controls on transcriber code `H`, and generated pairwise full-size, pairwise matched-size, and global section-label permutation outputs under `artifacts/exp005/`.
+
+Results:
+The run completed without runtime errors. All 5,216 selected `H` lines mapped to section metadata. For all 28 section pairs, observed full-section JSD was above the 97.5% pooled-label null quantile. For all 28 pairs, the `exp-004` pairwise matched reference JSD was also above the 97.5% matched null quantile. The observed `exp-003` mean pairwise JSD was 0.5554700431523788, compared with a global null mean of 0.3788255370327812 and null 97.5% quantile 0.38500785795761844.
+
+Open questions:
+How much of the section-label signal survives after controlling for Currier language, hand, line position, or other metadata? Which constrained null models should be tried next?
+
+Next actions:
+Design a follow-up that stratifies or constrains the null model by Currier language, hand, or related metadata before stronger interpretation of the section signal.

@@ -153,3 +153,31 @@ Future work should add a label-randomized null model before stronger inferential
 
 Open questions:
 Whether the null-control design should use pooled pairwise permutations only, a global label shuffle, or both.
+
+## 2026-06-21 - Require null-control comparison before stronger section-structure claims
+
+Decision:
+Treat pooled-label null-control comparison as a required step before making stronger claims about section-frequency structure.
+
+Reason:
+`exp-005` showed that observed section distances and `exp-004` pairwise matched references are larger than expected under this random section-label null model, but the result is still a control against one baseline rather than a direct explanation.
+
+Consequences:
+Future section-frequency interpretation should prefer observed-versus-null and matched-versus-null comparisons over raw observed JSD alone. Stronger claims still require additional controls for Currier language, hand, layout, and related metadata factors.
+
+Open questions:
+Which constrained null models should be added next.
+
+## 2026-06-21 - Treat empirical p-values from exp-005 as exploratory
+
+Decision:
+Treat empirical p-values from `exp-005` as exploratory null-model summaries, not definitive proof.
+
+Reason:
+The run used 1000 iterations, so the smallest attainable empirical p-value is `0.000999000999000999`. This is useful evidence against the tested null, but it does not by itself establish cause, meaning, or final statistical certainty.
+
+Consequences:
+Project documentation may report the empirical p-values and percentile results, but it must continue to emphasize the null-model scope and the remaining need for metadata-stratified controls.
+
+Open questions:
+Whether later null-control runs should increase iteration counts or add alternative baselines.

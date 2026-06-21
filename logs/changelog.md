@@ -67,3 +67,11 @@
 - Replaced the brief `exp-004` session entry with a project-level consolidation summary in OBS/INF/HYP/TODO form.
 - Recorded that `exp-004` supports robustness to token-count matching but does not explain the cause of the section signal.
 - Recorded `exp-005_section-label-null-control` as the recommended next experiment.
+
+## 2026-06-21 - Ran exp-005 section-label null control
+
+- Added `scripts/exp005_section_label_null_control.py`.
+- Generated `artifacts/exp005/` pooled-label null-control CSV and JSON outputs.
+- Created `experiments/exp-005_section-label-null-control_active_2026-06-21/` with protocol, results, findings, artifact index, and questions.
+- Updated project navigation, script/artifact indexes, decision log, and session summary.
+- Preserved all earlier experiment directories and artifacts unchanged.

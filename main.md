@@ -10,7 +10,7 @@ The goal is to create a durable research memory. The project should preserve obs
 
 ## Current Status
 
-Status: baseline, line-position, cleaned-parser, section-frequency, and section-frequency resampling-control experiments completed on 2026-06-21.
+Status: baseline, line-position, cleaned-parser, section-frequency, section-frequency resampling-control, and section-label null-control experiments completed on 2026-06-21.
 
 Initial raw transcription source has been added for `exp-001`: `data/raw/LSI_ivtff_0d.txt`, documented in `datasets/voynich_sources.md` and `methods/transcription_policy.md`.
 
@@ -48,6 +48,7 @@ Initial hypotheses are open concepts, not conclusions.
 - `experiments/exp-002b_clean-ivtff-parser-rerun_active_2026-06-21/` - parser-focused rerun completed; old and cleaned outputs compared.
 - `experiments/exp-003_section-frequency-comparison_active_2026-06-21/` - section-frequency comparison completed using IVTFF `$I` metadata.
 - `experiments/exp-004_section-frequency-resampling-control_active_2026-06-21/` - matched-token-count control completed for the `exp-003` section-frequency result.
+- `experiments/exp-005_section-label-null-control_active_2026-06-21/` - pooled-label null control completed for observed and matched section-frequency distances.
 
 ## Recent Important Decisions
 
@@ -58,10 +59,10 @@ Initial hypotheses are open concepts, not conclusions.
 - 2026-06-21: Use IVTFF `$I` page-header illustration type as the source-derived section metadata for `exp-003`.
 - 2026-06-21: Treat `exp-003` section-frequency results as exploratory until matched-token-count resampling or bootstrap controls are run.
 - 2026-06-21: After `exp-004`, prefer pairwise matched-size JSD for pair-specific section comparison and keep common-size resampling as a global stress test.
+- 2026-06-21: After `exp-005`, prefer null-control comparisons over raw observed section JSD when evaluating whether section labels carry measurable information.
 
 ## Next Steps
 
-- Recommended next experiment: `exp-005_section-label-null-control`.
-- Purpose: test whether observed and pairwise matched section JSD values are larger than expected under random section-label assignment.
-- Later follow-up: control section comparisons for Currier language, hand, line position, and folio/quire structure.
+- Next follow-up: control section comparisons and null models for Currier language, hand, line position, and folio/quire structure.
+- Optional method follow-up: add constrained null models within Currier language, hand, or quire structure.
 - Add verified sources for manuscript background notes.

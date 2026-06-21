@@ -1,0 +1,11 @@
+{
+  "observed_mean_pairwise_jsd_bits": 0.5554700431523788,
+  "null_mean_pairwise_jsd_mean_bits": 0.3788255370327812,
+  "null_mean_pairwise_jsd_std_bits": 0.003030097354796408,
+  "null_mean_pairwise_jsd_median_bits": 0.3788888389830416,
+  "null_mean_pairwise_jsd_q025_bits": 0.37312659371797946,
+  "null_mean_pairwise_jsd_q975_bits": 0.38500785795761844,
+  "observed_minus_null_mean_bits": 0.1766445061195976,
+  "empirical_percentile": 1.0,
+  "empirical_p_value": 0.000999000999000999
+}
