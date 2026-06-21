@@ -1,0 +1,443 @@
+{
+  "experiment": "exp-002b_clean-ivtff-parser-rerun",
+  "rerun_scope": "cleaned exp-002 word-position statistics",
+  "run_date_utc": "2026-06-21T18:04:22+00:00",
+  "script": "scripts/exp002b_clean_ivtff_parser_rerun.py",
+  "input": "data/raw/LSI_ivtff_0d.txt",
+  "input_sha256": "3f3f2af18cde10efe75c582f49b07b651c3397022fcbfa5854fecc424c121afa",
+  "output": "artifacts/exp002b/position_clean",
+  "parameters": {
+    "transcriber_code": "H",
+    "min_count": 10,
+    "top_n": 30,
+    "token_separators": "period, comma, whitespace",
+    "normalization": "lowercase; remove non-ASCII-letter uncertain/editorial marks after IVTFF markup removal",
+    "inline_angle_tag_policy": "replace inline <...> markup in selected text with token boundaries before tokenization",
+    "position_classes": [
+      "line_initial",
+      "line_medial",
+      "line_final",
+      "single_token_line"
+    ],
+    "distance_metric": "Jensen-Shannon divergence in bits"
+  },
+  "parse_stats": {
+    "input_lines": 38939,
+    "data_lines": 17344,
+    "selected_lines": 5216,
+    "non_empty_selected_lines": 5207,
+    "lines_with_angle_tags": 2229,
+    "angle_tags_removed": 4467,
+    "discarded_empty_tokens": 78,
+    "empty_selected_lines": 9,
+    "unique_angle_tag_forms_removed": 111
+  },
+  "line_stats": {
+    "total_normalized_tokens": 37967,
+    "multi_token_lines": 4395,
+    "single_token_lines": 812
+  },
+  "position_summary": [
+    {
+      "position_class": "line_initial",
+      "token_count": 4395,
+      "token_share": 0.11575842178734164,
+      "unique_token_count": 1976
+    },
+    {
+      "position_class": "line_medial",
+      "token_count": 28365,
+      "token_share": 0.7470961624568705,
+      "unique_token_count": 5545
+    },
+    {
+      "position_class": "line_final",
+      "token_count": 4395,
+      "token_share": 0.11575842178734164,
+      "unique_token_count": 1894
+    },
+    {
+      "position_class": "single_token_line",
+      "token_count": 812,
+      "token_share": 0.02138699396844628,
+      "unique_token_count": 646
+    }
+  ],
+  "distribution_distances": {
+    "line_initial_vs_line_medial": {
+      "jensen_shannon_divergence_bits": 0.5052142842100613
+    },
+    "line_final_vs_line_medial": {
+      "jensen_shannon_divergence_bits": 0.43994932334109943
+    },
+    "line_initial_vs_line_final": {
+      "jensen_shannon_divergence_bits": 0.674520700840175
+    }
+  },
+  "top_initial_tokens": [
+    {
+      "token": "daiin",
+      "count": 156
+    },
+    {
+      "token": "saiin",
+      "count": 56
+    },
+    {
+      "token": "dain",
+      "count": 47
+    },
+    {
+      "token": "sol",
+      "count": 40
+    },
+    {
+      "token": "sor",
+      "count": 37
+    },
+    {
+      "token": "dar",
+      "count": 36
+    },
+    {
+      "token": "sain",
+      "count": 35
+    },
+    {
+      "token": "y",
+      "count": 34
+    },
+    {
+      "token": "sho",
+      "count": 33
+    },
+    {
+      "token": "qokeey",
+      "count": 32
+    },
+    {
+      "token": "qokeedy",
+      "count": 32
+    },
+    {
+      "token": "or",
+      "count": 31
+    },
+    {
+      "token": "ol",
+      "count": 31
+    },
+    {
+      "token": "dair",
+      "count": 30
+    },
+    {
+      "token": "dshedy",
+      "count": 30
+    },
+    {
+      "token": "qokaiin",
+      "count": 28
+    },
+    {
+      "token": "sar",
+      "count": 28
+    },
+    {
+      "token": "tol",
+      "count": 28
+    },
+    {
+      "token": "qokain",
+      "count": 24
+    },
+    {
+      "token": "dor",
+      "count": 23
+    },
+    {
+      "token": "tchedy",
+      "count": 23
+    },
+    {
+      "token": "ycheey",
+      "count": 21
+    },
+    {
+      "token": "pol",
+      "count": 20
+    },
+    {
+      "token": "qokedy",
+      "count": 20
+    },
+    {
+      "token": "shor",
+      "count": 19
+    },
+    {
+      "token": "chol",
+      "count": 19
+    },
+    {
+      "token": "qotchy",
+      "count": 19
+    },
+    {
+      "token": "shol",
+      "count": 17
+    },
+    {
+      "token": "okeey",
+      "count": 17
+    },
+    {
+      "token": "dol",
+      "count": 16
+    }
+  ],
+  "top_medial_tokens": [
+    {
+      "token": "daiin",
+      "count": 574
+    },
+    {
+      "token": "ol",
+      "count": 460
+    },
+    {
+      "token": "chedy",
+      "count": 456
+    },
+    {
+      "token": "aiin",
+      "count": 436
+    },
+    {
+      "token": "shedy",
+      "count": 400
+    },
+    {
+      "token": "chol",
+      "count": 371
+    },
+    {
+      "token": "ar",
+      "count": 322
+    },
+    {
+      "token": "chey",
+      "count": 320
+    },
+    {
+      "token": "or",
+      "count": 316
+    },
+    {
+      "token": "qokeedy",
+      "count": 268
+    },
+    {
+      "token": "qokeey",
+      "count": 265
+    },
+    {
+      "token": "shey",
+      "count": 264
+    },
+    {
+      "token": "qokain",
+      "count": 245
+    },
+    {
+      "token": "qokedy",
+      "count": 243
+    },
+    {
+      "token": "dar",
+      "count": 236
+    },
+    {
+      "token": "al",
+      "count": 223
+    },
+    {
+      "token": "qokaiin",
+      "count": 221
+    },
+    {
+      "token": "s",
+      "count": 203
+    },
+    {
+      "token": "chor",
+      "count": 201
+    },
+    {
+      "token": "dal",
+      "count": 193
+    },
+    {
+      "token": "okaiin",
+      "count": 178
+    },
+    {
+      "token": "shol",
+      "count": 166
+    },
+    {
+      "token": "cheey",
+      "count": 166
+    },
+    {
+      "token": "qokal",
+      "count": 164
+    },
+    {
+      "token": "cheol",
+      "count": 161
+    },
+    {
+      "token": "dy",
+      "count": 161
+    },
+    {
+      "token": "okeey",
+      "count": 152
+    },
+    {
+      "token": "chy",
+      "count": 141
+    },
+    {
+      "token": "qokar",
+      "count": 141
+    },
+    {
+      "token": "otedy",
+      "count": 141
+    }
+  ],
+  "top_final_tokens": [
+    {
+      "token": "daiin",
+      "count": 134
+    },
+    {
+      "token": "dy",
+      "count": 108
+    },
+    {
+      "token": "am",
+      "count": 65
+    },
+    {
+      "token": "dam",
+      "count": 62
+    },
+    {
+      "token": "dal",
+      "count": 50
+    },
+    {
+      "token": "ol",
+      "count": 48
+    },
+    {
+      "token": "dar",
+      "count": 47
+    },
+    {
+      "token": "oly",
+      "count": 39
+    },
+    {
+      "token": "chedy",
+      "count": 39
+    },
+    {
+      "token": "al",
+      "count": 37
+    },
+    {
+      "token": "s",
+      "count": 36
+    },
+    {
+      "token": "aiin",
+      "count": 34
+    },
+    {
+      "token": "dain",
+      "count": 30
+    },
+    {
+      "token": "otam",
+      "count": 29
+    },
+    {
+      "token": "cthy",
+      "count": 28
+    },
+    {
+      "token": "qoky",
+      "count": 28
+    },
+    {
+      "token": "ar",
+      "count": 26
+    },
+    {
+      "token": "y",
+      "count": 26
+    },
+    {
+      "token": "oty",
+      "count": 25
+    },
+    {
+      "token": "oky",
+      "count": 23
+    },
+    {
+      "token": "ary",
+      "count": 23
+    },
+    {
+      "token": "qokam",
+      "count": 21
+    },
+    {
+      "token": "chdy",
+      "count": 20
+    },
+    {
+      "token": "sy",
+      "count": 20
+    },
+    {
+      "token": "shedy",
+      "count": 20
+    },
+    {
+      "token": "or",
+      "count": 19
+    },
+    {
+      "token": "chey",
+      "count": 19
+    },
+    {
+      "token": "ldy",
+      "count": 18
+    },
+    {
+      "token": "d",
+      "count": 17
+    },
+    {
+      "token": "qoty",
+      "count": 17
+    }
+  ]
+}

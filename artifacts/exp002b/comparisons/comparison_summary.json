@@ -1,0 +1,116 @@
+{
+  "experiment": "exp-002b_clean-ivtff-parser-rerun",
+  "old_exp001_summary": "artifacts/exp001/run_summary.json",
+  "old_exp001_top_tokens": "artifacts/exp001/top_tokens.csv",
+  "old_exp002_summary": "artifacts/exp002/position_summary.json",
+  "cleaned_baseline_summary": "artifacts/exp002b/baseline_clean/run_summary.json",
+  "cleaned_position_summary": "artifacts/exp002b/position_clean/position_summary.json",
+  "metric_comparison": [
+    {
+      "metric": "token_count",
+      "old_value": 37118,
+      "cleaned_value": 37967,
+      "delta": 849
+    },
+    {
+      "metric": "unique_token_count",
+      "old_value": 9051,
+      "cleaned_value": 8071,
+      "delta": -980
+    },
+    {
+      "metric": "type_token_ratio",
+      "old_value": 0.24384395710975806,
+      "cleaned_value": 0.21257934522084967,
+      "delta": -0.03126461188890839
+    },
+    {
+      "metric": "glyph_count",
+      "old_value": 201527,
+      "cleaned_value": 191545,
+      "delta": -9982
+    },
+    {
+      "metric": "unique_glyph_count",
+      "old_value": 26,
+      "cleaned_value": 22,
+      "delta": -4
+    },
+    {
+      "metric": "glyph_entropy_bits",
+      "old_value": 3.9233922700249884,
+      "cleaned_value": 3.8609603705527977,
+      "delta": -0.06243189947219063
+    },
+    {
+      "metric": "token_entropy_bits",
+      "old_value": 10.675741463409675,
+      "cleaned_value": 10.451632120067082,
+      "delta": -0.2241093433425938
+    },
+    {
+      "metric": "mean_token_length",
+      "old_value": 5.4293604181259765,
+      "cleaned_value": 5.045039112913846,
+      "delta": -0.38432130521213015
+    }
+  ],
+  "position_comparison": [
+    {
+      "position_class": "line_initial",
+      "old_token_count": 4395,
+      "cleaned_token_count": 4395,
+      "token_count_delta": 0,
+      "old_unique_token_count": 2020,
+      "cleaned_unique_token_count": 1976,
+      "unique_token_count_delta": -44
+    },
+    {
+      "position_class": "line_medial",
+      "old_token_count": 27516,
+      "cleaned_token_count": 28365,
+      "token_count_delta": 849,
+      "old_unique_token_count": 5945,
+      "cleaned_unique_token_count": 5545,
+      "unique_token_count_delta": -400
+    },
+    {
+      "position_class": "line_final",
+      "old_token_count": 4395,
+      "cleaned_token_count": 4395,
+      "token_count_delta": 0,
+      "old_unique_token_count": 2227,
+      "cleaned_unique_token_count": 1894,
+      "unique_token_count_delta": -333
+    },
+    {
+      "position_class": "single_token_line",
+      "old_token_count": 812,
+      "cleaned_token_count": 812,
+      "token_count_delta": 0,
+      "old_unique_token_count": 653,
+      "cleaned_unique_token_count": 646,
+      "unique_token_count_delta": -7
+    }
+  ],
+  "distribution_distance_comparison": [
+    {
+      "comparison": "line_initial_vs_line_medial",
+      "old_jsd_bits": 0.529873240757701,
+      "cleaned_jsd_bits": 0.5052142842100613,
+      "delta": -0.02465895654763972
+    },
+    {
+      "comparison": "line_final_vs_line_medial",
+      "old_jsd_bits": 0.5310279149774855,
+      "cleaned_jsd_bits": 0.43994932334109943,
+      "delta": -0.09107859163638604
+    },
+    {
+      "comparison": "line_initial_vs_line_final",
+      "old_jsd_bits": 0.7331851577131896,
+      "cleaned_jsd_bits": 0.674520700840175,
+      "delta": -0.05866445687301458
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+position_class,old_token_count,cleaned_token_count,token_count_delta,old_unique_token_count,cleaned_unique_token_count,unique_token_count_delta
+line_initial,4395,4395,0,2020,1976,-44
+line_medial,27516,28365,849,5945,5545,-400
+line_final,4395,4395,0,2227,1894,-333
+single_token_line,812,812,0,653,646,-7

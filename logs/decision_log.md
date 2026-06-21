@@ -41,3 +41,17 @@ Initial and final token totals are equal to the number of multi-token lines. Sin
 
 Open questions:
 Future parser work should decide whether line-position analysis should be repeated after IVTFF angle-tag markup is removed or modeled.
+
+## 2026-06-21 - Clean inline IVTFF angle tags before token normalization
+
+Decision:
+For cleaned reruns and recommended future parser policy, replace inline `<...>` markup inside selected IVTFF line text with token boundaries before tokenization and normalization.
+
+Reason:
+The old parser allowed markup text such as `plant` to become part of normalized manuscript tokens. Replacing tags with boundaries prevents markup from becoming tokens and avoids joining neighboring token text across removed tags.
+
+Consequences:
+Cleaned reruns are not directly interchangeable with old `exp-001` and `exp-002` outputs. Future experiments should state which parser policy they use.
+
+Open questions:
+Future parser versions may need to classify IVTFF angle-tag roles instead of treating all inline `<...>` forms uniformly.

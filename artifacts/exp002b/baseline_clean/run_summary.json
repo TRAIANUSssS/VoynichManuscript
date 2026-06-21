@@ -1,0 +1,212 @@
+{
+  "experiment": "exp-002b_clean-ivtff-parser-rerun",
+  "rerun_scope": "cleaned exp-001 baseline statistics",
+  "run_date_utc": "2026-06-21T18:04:21+00:00",
+  "script": "scripts/exp002b_clean_ivtff_parser_rerun.py",
+  "input": "data/raw/LSI_ivtff_0d.txt",
+  "input_sha256": "3f3f2af18cde10efe75c582f49b07b651c3397022fcbfa5854fecc424c121afa",
+  "output": "artifacts/exp002b/baseline_clean",
+  "parameters": {
+    "transcriber_code": "H",
+    "token_separators": "period, comma, whitespace",
+    "normalization": "lowercase; remove non-ASCII-letter uncertain/editorial marks after IVTFF markup removal",
+    "inline_angle_tag_policy": "replace inline <...> markup in selected text with token boundaries before tokenization",
+    "glyph_counting": "single EVA transcription characters after token normalization"
+  },
+  "parse_stats": {
+    "input_lines": 38939,
+    "data_lines": 17344,
+    "selected_lines": 5216,
+    "non_empty_selected_lines": 5207,
+    "lines_with_angle_tags": 2229,
+    "angle_tags_removed": 4467,
+    "discarded_empty_tokens": 78,
+    "empty_selected_lines": 9,
+    "unique_angle_tag_forms_removed": 111
+  },
+  "metrics": {
+    "token_count": 37967,
+    "unique_token_count": 8071,
+    "type_token_ratio": 0.21257934522084967,
+    "glyph_count": 191545,
+    "unique_glyph_count": 22,
+    "glyph_entropy_bits": 3.8609603705527977,
+    "token_entropy_bits": 10.451632120067082,
+    "mean_token_length": 5.045039112913846
+  },
+  "top_tokens": [
+    {
+      "token": "daiin",
+      "count": 864
+    },
+    {
+      "token": "ol",
+      "count": 539
+    },
+    {
+      "token": "chedy",
+      "count": 501
+    },
+    {
+      "token": "aiin",
+      "count": 470
+    },
+    {
+      "token": "shedy",
+      "count": 427
+    },
+    {
+      "token": "chol",
+      "count": 396
+    },
+    {
+      "token": "or",
+      "count": 367
+    },
+    {
+      "token": "ar",
+      "count": 353
+    },
+    {
+      "token": "chey",
+      "count": 344
+    },
+    {
+      "token": "dar",
+      "count": 319
+    },
+    {
+      "token": "qokeey",
+      "count": 308
+    },
+    {
+      "token": "qokeedy",
+      "count": 305
+    },
+    {
+      "token": "shey",
+      "count": 283
+    },
+    {
+      "token": "qokain",
+      "count": 279
+    },
+    {
+      "token": "qokedy",
+      "count": 272
+    },
+    {
+      "token": "dy",
+      "count": 271
+    },
+    {
+      "token": "qokaiin",
+      "count": 262
+    },
+    {
+      "token": "al",
+      "count": 261
+    },
+    {
+      "token": "s",
+      "count": 255
+    },
+    {
+      "token": "dal",
+      "count": 253
+    }
+  ],
+  "top_glyphs": [
+    {
+      "glyph": "o",
+      "count": 25468
+    },
+    {
+      "glyph": "e",
+      "count": 20070
+    },
+    {
+      "glyph": "h",
+      "count": 17856
+    },
+    {
+      "glyph": "y",
+      "count": 17655
+    },
+    {
+      "glyph": "a",
+      "count": 14281
+    },
+    {
+      "glyph": "c",
+      "count": 13314
+    },
+    {
+      "glyph": "d",
+      "count": 12973
+    },
+    {
+      "glyph": "i",
+      "count": 11732
+    },
+    {
+      "glyph": "k",
+      "count": 10934
+    },
+    {
+      "glyph": "l",
+      "count": 10518
+    },
+    {
+      "glyph": "r",
+      "count": 7456
+    },
+    {
+      "glyph": "s",
+      "count": 7387
+    },
+    {
+      "glyph": "t",
+      "count": 6944
+    },
+    {
+      "glyph": "n",
+      "count": 6141
+    },
+    {
+      "glyph": "q",
+      "count": 5423
+    },
+    {
+      "glyph": "p",
+      "count": 1630
+    },
+    {
+      "glyph": "m",
+      "count": 1116
+    },
+    {
+      "glyph": "f",
+      "count": 505
+    },
+    {
+      "glyph": "g",
+      "count": 96
+    },
+    {
+      "glyph": "x",
+      "count": 35
+    }
+  ],
+  "artifacts": [
+    "token_frequencies.csv",
+    "glyph_frequencies.csv",
+    "word_length_distribution.csv",
+    "top_tokens.csv",
+    "top_glyphs.csv",
+    "run_summary.json",
+    "word_length_distribution.png",
+    "top_tokens.png",
+    "glyph_frequencies.png"
+  ]
+}

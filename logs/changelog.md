@@ -30,3 +30,11 @@
 - Created `experiments/exp-002_word-position-patterns_active_2026-06-21/` with experiment description, results, findings, and notes.
 - Updated project navigation, script/artifact indexes, decision log, and session summary.
 - Documented the parser-markup limitation discovered under `exp-001`-compatible normalization.
+
+## 2026-06-21 - Ran exp-002b cleaned IVTFF parser rerun
+
+- Added `scripts/exp002b_clean_ivtff_parser_rerun.py`.
+- Generated `artifacts/exp002b/` cleaned baseline outputs, cleaned position outputs, parser audit examples, and old-vs-cleaned comparison tables.
+- Created `experiments/exp-002b_clean-ivtff-parser-rerun_active_2026-06-21/`.
+- Updated transcription policy, project navigation, script/artifact indexes, decision log, conflict log, and session summary.
+- Preserved old `exp-001` and `exp-002` artifacts unchanged.

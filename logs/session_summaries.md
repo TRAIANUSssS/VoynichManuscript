@@ -51,6 +51,23 @@ The `exp-001`-compatible normalization can admit IVTFF angle-tag markup into tok
 Next actions:
 Audit IVTFF markup handling, then rerun baseline and line-position analyses with a parser policy that distinguishes transcription text from structural markup.
 
+## 2026-06-21 - exp-002b cleaned IVTFF parser rerun
+
+Context:
+`exp-002` revealed that the `exp-001`-compatible parser allowed IVTFF angle-tag markup to enter normalized token text.
+
+What was done:
+Added `scripts/exp002b_clean_ivtff_parser_rerun.py`, documented a cleaned parser policy, reran baseline and line-position analyses under `artifacts/exp002b/`, and created old-vs-cleaned comparison tables.
+
+Results:
+The cleaned parser removed 4,467 inline angle tags from 2,229 selected `H` lines. Cleaned token count was 37,967 versus 37,118 old tokens; cleaned unique token count was 8,071 versus 9,051 old unique tokens; all reported Jensen-Shannon position divergences decreased.
+
+Open questions:
+Future work should decide whether cleaned outputs supersede old parser-limited outputs for baseline comparisons and whether angle tags need role-specific handling.
+
+Next actions:
+Refactor the cleaned parser into shared utilities or run the next experiment using the cleaned parser policy explicitly.
+
 ## Template
 
 Context:
