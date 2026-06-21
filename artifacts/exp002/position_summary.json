@@ -1,0 +1,92 @@
+{
+  "experiment": "exp-002_word-position-patterns",
+  "run_date_utc": "2026-06-21T17:47:49+00:00",
+  "script": "scripts/exp002_word_position_patterns.py",
+  "input": "data/raw/LSI_ivtff_0d.txt",
+  "input_sha256": "3f3f2af18cde10efe75c582f49b07b651c3397022fcbfa5854fecc424c121afa",
+  "output": "artifacts/exp002",
+  "parameters": {
+    "transcriber_code": "H",
+    "min_count": 10,
+    "top_n": 30,
+    "token_separators": "period, comma, whitespace",
+    "normalization": "lowercase; remove non-ASCII-letter uncertain/editorial marks",
+    "position_classes": [
+      "line_initial",
+      "line_medial",
+      "line_final",
+      "single_token_line"
+    ],
+    "distance_metric": "Jensen-Shannon divergence in bits"
+  },
+  "parse_stats": {
+    "input_lines": 38939,
+    "data_lines": 17344,
+    "selected_lines": 5216,
+    "non_empty_selected_lines": 5207,
+    "empty_selected_lines": 9
+  },
+  "line_stats": {
+    "total_normalized_tokens": 37118,
+    "multi_token_lines": 4395,
+    "single_token_lines": 812
+  },
+  "position_summary": [
+    {
+      "position_class": "line_initial",
+      "token_count": 4395,
+      "token_share": 0.11840616412522226,
+      "unique_token_count": 2020
+    },
+    {
+      "position_class": "line_medial",
+      "token_count": 27516,
+      "token_share": 0.7413114930761355,
+      "unique_token_count": 5945
+    },
+    {
+      "position_class": "line_final",
+      "token_count": 4395,
+      "token_share": 0.11840616412522226,
+      "unique_token_count": 2227
+    },
+    {
+      "position_class": "single_token_line",
+      "token_count": 812,
+      "token_share": 0.021876178673419903,
+      "unique_token_count": 653
+    }
+  ],
+  "distribution_distances": {
+    "line_initial_vs_line_medial": {
+      "jensen_shannon_divergence_bits": 0.529873240757701
+    },
+    "line_final_vs_line_medial": {
+      "jensen_shannon_divergence_bits": 0.5310279149774855
+    },
+    "line_initial_vs_line_final": {
+      "jensen_shannon_divergence_bits": 0.7331851577131896
+    }
+  },
+  "artifacts": [
+    "position_summary.json",
+    "position_summary.csv",
+    "token_position_counts.csv",
+    "token_position_shares.csv",
+    "token_position_overrepresentation.csv",
+    "top_initial_tokens.csv",
+    "top_medial_tokens.csv",
+    "top_final_tokens.csv",
+    "distribution_distances.json",
+    "plots/top_initial_tokens.png",
+    "plots/top_final_tokens.png",
+    "plots/position_distribution_comparison.png"
+  ],
+  "limitations": [
+    "Uses the same baseline token normalization as exp-001.",
+    "Analyzes position inside transcription lines, not manuscript layout geometry.",
+    "Does not use folio, section, scribe/hand, Currier-language, or control-corpus metadata.",
+    "Jensen-Shannon divergence measures distribution distance but does not identify a cause.",
+    "Overrepresentation rankings use a count threshold and are descriptive."
+  ]
+}

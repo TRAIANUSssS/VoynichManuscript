@@ -1,0 +1,11 @@
+{
+  "line_initial_vs_line_medial": {
+    "jensen_shannon_divergence_bits": 0.529873240757701
+  },
+  "line_final_vs_line_medial": {
+    "jensen_shannon_divergence_bits": 0.5310279149774855
+  },
+  "line_initial_vs_line_final": {
+    "jensen_shannon_divergence_bits": 0.7331851577131896
+  }
+}

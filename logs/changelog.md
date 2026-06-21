@@ -22,3 +22,11 @@
 - Created `experiments/exp-001_baseline-statistics_active_2026-06-21/` with protocol, results, findings, questions, rejected findings, and artifact index.
 - Marked the original `experiments/exp-001_baseline-statistics_concept_2026-06-21.md` as superseded.
 - Updated dataset documentation, transcription policy, project navigation, decision log, and session summary.
+
+## 2026-06-21 - Ran exp-002 word-position patterns workflow
+
+- Added `scripts/exp002_word_position_patterns.py`.
+- Generated `artifacts/exp002/` CSV, JSON, and PNG outputs.
+- Created `experiments/exp-002_word-position-patterns_active_2026-06-21/` with experiment description, results, findings, and notes.
+- Updated project navigation, script/artifact indexes, decision log, and session summary.
+- Documented the parser-markup limitation discovered under `exp-001`-compatible normalization.

@@ -27,3 +27,17 @@ Consequences:
 
 Open questions:
 License/status still needs verification. Future experiments should test alternate transcriptions, alternate IVTFF versions, and alternate token/glyph parsing policies.
+
+## 2026-06-21 - Position classes for exp-002
+
+Decision:
+For `exp-002`, classify tokens as `line_initial`, `line_medial`, `line_final`, or `single_token_line`, keeping single-token lines separate from initial and final counts.
+
+Reason:
+Single-token lines do not have distinct beginning and ending tokens. Keeping them separate avoids double-counting and makes the position-class counts reproducible.
+
+Consequences:
+Initial and final token totals are equal to the number of multi-token lines. Single-token lines require separate interpretation and should not be merged into initial/final categories without a new protocol version.
+
+Open questions:
+Future parser work should decide whether line-position analysis should be repeated after IVTFF angle-tag markup is removed or modeled.

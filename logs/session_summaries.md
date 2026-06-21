@@ -34,6 +34,23 @@ The source license/status needs verification. Future work should decide how to m
 Next actions:
 Review `exp-001` outputs, then create a follow-up experiment for either control-corpus comparison or improved EVA-aware parsing.
 
+## 2026-06-21 - exp-002 word-position patterns run
+
+Context:
+The project needed a second experiment extending `exp-001` by adding token position inside selected transcription lines.
+
+What was done:
+Wrote `scripts/exp002_word_position_patterns.py`, ran it on `data/raw/LSI_ivtff_0d.txt` with transcriber code `H`, generated position summary, token-position counts, shares, overrepresentation tables, Jensen-Shannon distance metrics, and PNG plots under `artifacts/exp002/`.
+
+Results:
+The run completed without runtime errors. It selected 5,216 `H` lines, found 5,207 non-empty selected lines, classified 37,118 normalized tokens, and reported Jensen-Shannon divergence values for initial/medial/final distribution comparisons.
+
+Open questions:
+The `exp-001`-compatible normalization can admit IVTFF angle-tag markup into token text, which limits interpretation of some overrepresentation results. A parser-focused follow-up is needed before stronger claims.
+
+Next actions:
+Audit IVTFF markup handling, then rerun baseline and line-position analyses with a parser policy that distinguishes transcription text from structural markup.
+
 ## Template
 
 Context:
