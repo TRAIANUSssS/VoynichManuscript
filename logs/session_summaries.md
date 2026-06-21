@@ -68,6 +68,23 @@ Future work should decide whether cleaned outputs supersede old parser-limited o
 Next actions:
 Refactor the cleaned parser into shared utilities or run the next experiment using the cleaned parser policy explicitly.
 
+## 2026-06-21 - exp-003 section frequency comparison
+
+Context:
+The project needed a metadata-aware comparison using the cleaned parser policy from `exp-002b`.
+
+What was done:
+Added `scripts/exp003_section_frequency_comparison.py`, derived `data/metadata/folio_sections.csv` from IVTFF page header `$I` metadata, ran section-level frequency comparisons on transcriber code `H`, and generated outputs under `artifacts/exp003/`.
+
+Results:
+The run mapped all 5,216 selected `H` lines to eight IVTFF section categories. Pairwise section Jensen-Shannon distances ranged from 0.3347291601069759 to 0.7132735389659056 bits, with mean 0.5554700431523788 bits.
+
+Open questions:
+The section labels are IVTFF illustration-type metadata, not an independently verified taxonomy. Follow-up should control for Currier language, hand, and section sample size.
+
+Next actions:
+Run a controlled section comparison using Currier language and hand metadata, or add matched-size resampling before interpreting section differences.
+
 ## Template
 
 Context:

@@ -38,3 +38,11 @@
 - Created `experiments/exp-002b_clean-ivtff-parser-rerun_active_2026-06-21/`.
 - Updated transcription policy, project navigation, script/artifact indexes, decision log, conflict log, and session summary.
 - Preserved old `exp-001` and `exp-002` artifacts unchanged.
+
+## 2026-06-21 - Ran exp-003 section frequency comparison
+
+- Added `scripts/exp003_section_frequency_comparison.py`.
+- Generated `data/metadata/folio_sections.csv` from IVTFF page header `$I` metadata.
+- Generated `artifacts/exp003/` section summaries, token tables, overrepresentation tables, pairwise distances, section-vs-position comparisons, unmapped-line audit, and plots.
+- Created `experiments/exp-003_section-frequency-comparison_active_2026-06-21/`.
+- Updated section knowledge, project navigation, script/artifact indexes, decision log, and session summary.

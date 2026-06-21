@@ -1,0 +1,12 @@
+{
+  "input_lines": 38939,
+  "data_lines": 17344,
+  "selected_lines": 5216,
+  "non_empty_selected_lines": 5207,
+  "mapped_selected_lines": 5216,
+  "lines_with_angle_tags": 2229,
+  "angle_tags_removed": 4467,
+  "discarded_empty_tokens": 78,
+  "empty_selected_lines": 9,
+  "unique_angle_tag_forms_removed": 111
+}

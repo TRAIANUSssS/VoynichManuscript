@@ -9,3 +9,4 @@ Current scripts:
 - `exp001_baseline_stats.py` - baseline token, glyph/character, word-length, entropy, CSV, JSON, and chart generation for `exp-001`.
 - `exp002_word_position_patterns.py` - token frequency, position-class, overrepresentation, and distribution-distance outputs for `exp-002`.
 - `exp002b_clean_ivtff_parser_rerun.py` - cleaned IVTFF angle-tag parser audit and old-vs-cleaned reruns for `exp-001` and `exp-002`.
+- `exp003_section_frequency_comparison.py` - cleaned-parser section frequency comparison using IVTFF-derived folio section metadata.

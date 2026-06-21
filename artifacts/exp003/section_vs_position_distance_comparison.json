@@ -1,0 +1,19 @@
+{
+  "section_min_jsd_bits": 0.3347291601069759,
+  "section_mean_jsd_bits": 0.5554700431523788,
+  "section_max_jsd_bits": 0.7132735389659056,
+  "exp002b_position_distances": {
+    "line_initial_vs_line_medial": {
+      "jensen_shannon_divergence_bits": 0.5052142842100613
+    },
+    "line_final_vs_line_medial": {
+      "jensen_shannon_divergence_bits": 0.43994932334109943
+    },
+    "line_initial_vs_line_final": {
+      "jensen_shannon_divergence_bits": 0.674520700840175
+    }
+  },
+  "exp002b_position_min_jsd_bits": 0.43994932334109943,
+  "exp002b_position_mean_jsd_bits": 0.5398947694637786,
+  "exp002b_position_max_jsd_bits": 0.674520700840175
+}

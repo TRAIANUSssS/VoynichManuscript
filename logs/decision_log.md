@@ -55,3 +55,31 @@ Cleaned reruns are not directly interchangeable with old `exp-001` and `exp-002`
 
 Open questions:
 Future parser versions may need to classify IVTFF angle-tag roles instead of treating all inline `<...>` forms uniformly.
+
+## 2026-06-21 - Use IVTFF page headers as exp-003 section metadata
+
+Decision:
+Use IVTFF page header parsable information, specifically `$I` illustration type, to derive `data/metadata/folio_sections.csv` for `exp-003`.
+
+Reason:
+The repository did not contain a prior folio-to-section metadata file. The selected transcription source includes page header metadata and documents `$I` code meanings in its comments, with source documentation at https://www.voynich.nu/transcr.html.
+
+Consequences:
+`exp-003` section labels are source-derived IVTFF illustration-type categories. They are suitable for a first reproducible section comparison but should not be treated as an independently verified project taxonomy.
+
+Open questions:
+Future work should decide whether IVTFF `$I` categories become the project default or remain experiment-level metadata.
+
+## 2026-06-21 - Report unmapped section lines explicitly
+
+Decision:
+For `exp-003`, selected transcription lines without a matching metadata folio are written to `artifacts/exp003/unmapped_lines.csv` rather than silently dropped.
+
+Reason:
+Section statistics must be auditable and reproducible.
+
+Consequences:
+The run can distinguish corpus coverage from section-level results. In the first `exp-003` run, no selected lines were unmapped.
+
+Open questions:
+Future metadata joins should use the same explicit unmapped-line reporting unless a later protocol replaces it.

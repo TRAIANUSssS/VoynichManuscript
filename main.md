@@ -10,7 +10,7 @@ The goal is to create a durable research memory. The project should preserve obs
 
 ## Current Status
 
-Status: baseline, line-position, and cleaned-parser rerun experiments completed on 2026-06-21.
+Status: baseline, line-position, cleaned-parser, and section-frequency experiments completed on 2026-06-21.
 
 Initial raw transcription source has been added for `exp-001`: `data/raw/LSI_ivtff_0d.txt`, documented in `datasets/voynich_sources.md` and `methods/transcription_policy.md`.
 
@@ -46,6 +46,7 @@ Initial hypotheses are open concepts, not conclusions.
 - `experiments/exp-001_baseline-statistics_active_2026-06-21/` - first baseline statistics workflow run completed once; follow-up review pending.
 - `experiments/exp-002_word-position-patterns_active_2026-06-21/` - line-position token distribution run completed once; parser-markup limitation needs follow-up.
 - `experiments/exp-002b_clean-ivtff-parser-rerun_active_2026-06-21/` - parser-focused rerun completed; old and cleaned outputs compared.
+- `experiments/exp-003_section-frequency-comparison_active_2026-06-21/` - section-frequency comparison completed using IVTFF `$I` metadata.
 
 ## Recent Important Decisions
 
@@ -53,9 +54,10 @@ Initial hypotheses are open concepts, not conclusions.
 - 2026-06-21: Use the IVTFF EVA interlinear transcription `H` lines as the scoped baseline input for `exp-001`.
 - 2026-06-21: Keep single-token lines as a separate position class in `exp-002`.
 - 2026-06-21: For cleaned IVTFF parsing, replace inline `<...>` markup with token boundaries before normalization.
+- 2026-06-21: Use IVTFF `$I` page-header illustration type as the source-derived section metadata for `exp-003`.
 
 ## Next Steps
 
-- Decide whether cleaned parser outputs should supersede old parser-limited outputs for future baselines.
-- Consider refactoring the cleaned parser into shared utilities before adding control corpora or folio metadata.
+- Decide whether IVTFF `$I` categories should become the repository's standard section taxonomy.
+- Run a follow-up that controls section comparisons for Currier language, hand, and section sample size.
 - Add verified sources for manuscript background notes.

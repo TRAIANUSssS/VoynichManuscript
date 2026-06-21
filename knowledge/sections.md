@@ -1,28 +1,33 @@
 # Manuscript Sections
 
-## Botanical
+## IVTFF `$I` Illustration-Type Categories
 
-TODO: Describe the section only after adding sources. Status: `needs-source`.
+Status: source-derived metadata used for `exp-003`; needs independent review before becoming a project-wide section taxonomy.
 
-## Astronomical / Astrological
+Source:
+- `data/raw/LSI_ivtff_0d.txt`
+- https://www.voynich.nu/transcr.html
 
-TODO: Describe the section only after adding sources. Status: `needs-source`.
+The IVTFF file comments define `$I` as illustration type with these codes:
 
-## Balneological / Biological
+- `T`: Text
+- `H`: Herbal
+- `A`: Astronomical
+- `Z`: Zodiac
+- `B`: Biological
+- `C`: Cosmological
+- `P`: Pharmaceutical
+- `S`: Stars
 
-TODO: Describe the section only after adding sources. Status: `needs-source`.
+Machine-readable mapping:
+- `data/metadata/folio_sections.csv`
 
-## Pharmaceutical
-
-TODO: Describe the section only after adding sources. Status: `needs-source`.
-
-## Recipes / Text-Only Section
-
-TODO: Describe the section only after adding sources. Status: `needs-source`.
+Note:
+These labels are used as metadata categories in `exp-003`. They should not be treated as independently verified section boundaries without further source review.
 
 ## Open Questions
 
 - How should section boundaries be represented in machine-readable metadata?
 - Which section labels are conventional, and which are interpretive?
 - How should uncertain folio assignments be handled?
-
+- Should IVTFF `$I` illustration-type categories become the default project section taxonomy?

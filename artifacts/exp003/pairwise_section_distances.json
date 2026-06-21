@@ -1,0 +1,142 @@
+[
+  {
+    "section_a": "astronomical",
+    "section_b": "biological",
+    "jensen_shannon_divergence_bits": 0.7132735389659056
+  },
+  {
+    "section_a": "astronomical",
+    "section_b": "cosmological",
+    "jensen_shannon_divergence_bits": 0.6225355171064655
+  },
+  {
+    "section_a": "astronomical",
+    "section_b": "herbal",
+    "jensen_shannon_divergence_bits": 0.6088666535195559
+  },
+  {
+    "section_a": "astronomical",
+    "section_b": "pharmaceutical",
+    "jensen_shannon_divergence_bits": 0.5962263607338256
+  },
+  {
+    "section_a": "astronomical",
+    "section_b": "stars",
+    "jensen_shannon_divergence_bits": 0.6690405386257614
+  },
+  {
+    "section_a": "astronomical",
+    "section_b": "text",
+    "jensen_shannon_divergence_bits": 0.6507669577149167
+  },
+  {
+    "section_a": "astronomical",
+    "section_b": "zodiac",
+    "jensen_shannon_divergence_bits": 0.6627228329797061
+  },
+  {
+    "section_a": "biological",
+    "section_b": "cosmological",
+    "jensen_shannon_divergence_bits": 0.5061078146284147
+  },
+  {
+    "section_a": "biological",
+    "section_b": "herbal",
+    "jensen_shannon_divergence_bits": 0.4985178537863961
+  },
+  {
+    "section_a": "biological",
+    "section_b": "pharmaceutical",
+    "jensen_shannon_divergence_bits": 0.5958551512680121
+  },
+  {
+    "section_a": "biological",
+    "section_b": "stars",
+    "jensen_shannon_divergence_bits": 0.3347291601069759
+  },
+  {
+    "section_a": "biological",
+    "section_b": "text",
+    "jensen_shannon_divergence_bits": 0.5113033374073725
+  },
+  {
+    "section_a": "biological",
+    "section_b": "zodiac",
+    "jensen_shannon_divergence_bits": 0.6898941491112591
+  },
+  {
+    "section_a": "cosmological",
+    "section_b": "herbal",
+    "jensen_shannon_divergence_bits": 0.4421483043194374
+  },
+  {
+    "section_a": "cosmological",
+    "section_b": "pharmaceutical",
+    "jensen_shannon_divergence_bits": 0.5613311195084363
+  },
+  {
+    "section_a": "cosmological",
+    "section_b": "stars",
+    "jensen_shannon_divergence_bits": 0.44201233814307345
+  },
+  {
+    "section_a": "cosmological",
+    "section_b": "text",
+    "jensen_shannon_divergence_bits": 0.46739630245416325
+  },
+  {
+    "section_a": "cosmological",
+    "section_b": "zodiac",
+    "jensen_shannon_divergence_bits": 0.5691746571897496
+  },
+  {
+    "section_a": "herbal",
+    "section_b": "pharmaceutical",
+    "jensen_shannon_divergence_bits": 0.44591760119837986
+  },
+  {
+    "section_a": "herbal",
+    "section_b": "stars",
+    "jensen_shannon_divergence_bits": 0.4462304641923659
+  },
+  {
+    "section_a": "herbal",
+    "section_b": "text",
+    "jensen_shannon_divergence_bits": 0.46185079406885043
+  },
+  {
+    "section_a": "herbal",
+    "section_b": "zodiac",
+    "jensen_shannon_divergence_bits": 0.6201059151002524
+  },
+  {
+    "section_a": "pharmaceutical",
+    "section_b": "stars",
+    "jensen_shannon_divergence_bits": 0.5451207646113809
+  },
+  {
+    "section_a": "pharmaceutical",
+    "section_b": "text",
+    "jensen_shannon_divergence_bits": 0.5538883366031113
+  },
+  {
+    "section_a": "pharmaceutical",
+    "section_b": "zodiac",
+    "jensen_shannon_divergence_bits": 0.633676323360163
+  },
+  {
+    "section_a": "stars",
+    "section_b": "text",
+    "jensen_shannon_divergence_bits": 0.47953324768089006
+  },
+  {
+    "section_a": "stars",
+    "section_b": "zodiac",
+    "jensen_shannon_divergence_bits": 0.6102496055949201
+  },
+  {
+    "section_a": "text",
+    "section_b": "zodiac",
+    "jensen_shannon_divergence_bits": 0.6146855682868653
+  }
+]

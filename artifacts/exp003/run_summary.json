@@ -1,0 +1,325 @@
+{
+  "experiment": "exp-003_section-frequency-comparison",
+  "run_date_utc": "2026-06-21T18:18:07+00:00",
+  "script": "scripts/exp003_section_frequency_comparison.py",
+  "input": "data/raw/LSI_ivtff_0d.txt",
+  "input_sha256": "3f3f2af18cde10efe75c582f49b07b651c3397022fcbfa5854fecc424c121afa",
+  "metadata": "data/metadata/folio_sections.csv",
+  "metadata_created_by_script": true,
+  "metadata_source": "IVTFF page header parsable information in data/raw/LSI_ivtff_0d.txt; code meanings documented in the raw file comments and https://www.voynich.nu/transcr.html",
+  "output": "artifacts/exp003",
+  "parameters": {
+    "transcriber_code": "H",
+    "min_count": 10,
+    "top_n": 30,
+    "parser_policy": "cleaned exp-002b policy: remove comments, replace inline <...> markup with token boundaries, split on periods/commas/whitespace, lowercase and strip non-ASCII letters"
+  },
+  "parse_stats": {
+    "input_lines": 38939,
+    "data_lines": 17344,
+    "selected_lines": 5216,
+    "non_empty_selected_lines": 5207,
+    "mapped_selected_lines": 5216,
+    "lines_with_angle_tags": 2229,
+    "angle_tags_removed": 4467,
+    "discarded_empty_tokens": 78,
+    "empty_selected_lines": 9,
+    "unique_angle_tag_forms_removed": 111
+  },
+  "section_count": 8,
+  "sections": [
+    "astronomical",
+    "biological",
+    "cosmological",
+    "herbal",
+    "pharmaceutical",
+    "stars",
+    "text",
+    "zodiac"
+  ],
+  "section_summary": [
+    {
+      "section": "astronomical",
+      "line_count": 240,
+      "token_count": 850,
+      "unique_token_count": 628,
+      "type_token_ratio": 0.7388235294117647,
+      "glyph_count": 4586,
+      "unique_glyph_count": 19,
+      "glyph_entropy_bits": 3.7554038596397774,
+      "token_entropy_bits": 9.00256820629607,
+      "mean_token_length": 5.395294117647059,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "biological",
+      "line_count": 917,
+      "token_count": 6918,
+      "unique_token_count": 1550,
+      "type_token_ratio": 0.22405319456490316,
+      "glyph_count": 34677,
+      "unique_glyph_count": 19,
+      "glyph_entropy_bits": 3.8012811888216547,
+      "token_entropy_bits": 8.578814525917462,
+      "mean_token_length": 5.012575888985256,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "cosmological",
+      "line_count": 323,
+      "token_count": 2550,
+      "unique_token_count": 1156,
+      "type_token_ratio": 0.4533333333333333,
+      "glyph_count": 12107,
+      "unique_glyph_count": 21,
+      "glyph_entropy_bits": 3.888002964327609,
+      "token_entropy_bits": 9.235654823952277,
+      "mean_token_length": 4.747843137254902,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "herbal",
+      "line_count": 1630,
+      "token_count": 11418,
+      "unique_token_count": 3358,
+      "type_token_ratio": 0.29409703976177964,
+      "glyph_count": 55214,
+      "unique_glyph_count": 21,
+      "glyph_entropy_bits": 3.8440122201108893,
+      "token_entropy_bits": 9.880016575194244,
+      "mean_token_length": 4.835698020669119,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "pharmaceutical",
+      "line_count": 456,
+      "token_count": 2579,
+      "unique_token_count": 1139,
+      "type_token_ratio": 0.44164404808065144,
+      "glyph_count": 12936,
+      "unique_glyph_count": 19,
+      "glyph_entropy_bits": 3.7708088781524234,
+      "token_entropy_bits": 9.080395878210997,
+      "mean_token_length": 5.0158976347421484,
+      "median_token_length": 5
+    },
+    {
+      "section": "stars",
+      "line_count": 1083,
+      "token_count": 10694,
+      "unique_token_count": 3100,
+      "type_token_ratio": 0.2898821769216383,
+      "glyph_count": 56914,
+      "unique_glyph_count": 20,
+      "glyph_entropy_bits": 3.853546551662121,
+      "token_entropy_bits": 9.847957033756035,
+      "mean_token_length": 5.322049747521975,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "text",
+      "line_count": 223,
+      "token_count": 1626,
+      "unique_token_count": 920,
+      "type_token_ratio": 0.5658056580565806,
+      "glyph_count": 8182,
+      "unique_glyph_count": 21,
+      "glyph_entropy_bits": 3.8894674844565778,
+      "token_entropy_bits": 9.261077674818397,
+      "mean_token_length": 5.031980319803198,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "zodiac",
+      "line_count": 335,
+      "token_count": 1332,
+      "unique_token_count": 808,
+      "type_token_ratio": 0.6066066066066066,
+      "glyph_count": 6929,
+      "unique_glyph_count": 19,
+      "glyph_entropy_bits": 3.727408990411057,
+      "token_entropy_bits": 9.082003995987538,
+      "mean_token_length": 5.201951951951952,
+      "median_token_length": 5.0
+    }
+  ],
+  "pairwise_section_distances": [
+    {
+      "section_a": "astronomical",
+      "section_b": "biological",
+      "jensen_shannon_divergence_bits": 0.7132735389659056
+    },
+    {
+      "section_a": "astronomical",
+      "section_b": "cosmological",
+      "jensen_shannon_divergence_bits": 0.6225355171064655
+    },
+    {
+      "section_a": "astronomical",
+      "section_b": "herbal",
+      "jensen_shannon_divergence_bits": 0.6088666535195559
+    },
+    {
+      "section_a": "astronomical",
+      "section_b": "pharmaceutical",
+      "jensen_shannon_divergence_bits": 0.5962263607338256
+    },
+    {
+      "section_a": "astronomical",
+      "section_b": "stars",
+      "jensen_shannon_divergence_bits": 0.6690405386257614
+    },
+    {
+      "section_a": "astronomical",
+      "section_b": "text",
+      "jensen_shannon_divergence_bits": 0.6507669577149167
+    },
+    {
+      "section_a": "astronomical",
+      "section_b": "zodiac",
+      "jensen_shannon_divergence_bits": 0.6627228329797061
+    },
+    {
+      "section_a": "biological",
+      "section_b": "cosmological",
+      "jensen_shannon_divergence_bits": 0.5061078146284147
+    },
+    {
+      "section_a": "biological",
+      "section_b": "herbal",
+      "jensen_shannon_divergence_bits": 0.4985178537863961
+    },
+    {
+      "section_a": "biological",
+      "section_b": "pharmaceutical",
+      "jensen_shannon_divergence_bits": 0.5958551512680121
+    },
+    {
+      "section_a": "biological",
+      "section_b": "stars",
+      "jensen_shannon_divergence_bits": 0.3347291601069759
+    },
+    {
+      "section_a": "biological",
+      "section_b": "text",
+      "jensen_shannon_divergence_bits": 0.5113033374073725
+    },
+    {
+      "section_a": "biological",
+      "section_b": "zodiac",
+      "jensen_shannon_divergence_bits": 0.6898941491112591
+    },
+    {
+      "section_a": "cosmological",
+      "section_b": "herbal",
+      "jensen_shannon_divergence_bits": 0.4421483043194374
+    },
+    {
+      "section_a": "cosmological",
+      "section_b": "pharmaceutical",
+      "jensen_shannon_divergence_bits": 0.5613311195084363
+    },
+    {
+      "section_a": "cosmological",
+      "section_b": "stars",
+      "jensen_shannon_divergence_bits": 0.44201233814307345
+    },
+    {
+      "section_a": "cosmological",
+      "section_b": "text",
+      "jensen_shannon_divergence_bits": 0.46739630245416325
+    },
+    {
+      "section_a": "cosmological",
+      "section_b": "zodiac",
+      "jensen_shannon_divergence_bits": 0.5691746571897496
+    },
+    {
+      "section_a": "herbal",
+      "section_b": "pharmaceutical",
+      "jensen_shannon_divergence_bits": 0.44591760119837986
+    },
+    {
+      "section_a": "herbal",
+      "section_b": "stars",
+      "jensen_shannon_divergence_bits": 0.4462304641923659
+    },
+    {
+      "section_a": "herbal",
+      "section_b": "text",
+      "jensen_shannon_divergence_bits": 0.46185079406885043
+    },
+    {
+      "section_a": "herbal",
+      "section_b": "zodiac",
+      "jensen_shannon_divergence_bits": 0.6201059151002524
+    },
+    {
+      "section_a": "pharmaceutical",
+      "section_b": "stars",
+      "jensen_shannon_divergence_bits": 0.5451207646113809
+    },
+    {
+      "section_a": "pharmaceutical",
+      "section_b": "text",
+      "jensen_shannon_divergence_bits": 0.5538883366031113
+    },
+    {
+      "section_a": "pharmaceutical",
+      "section_b": "zodiac",
+      "jensen_shannon_divergence_bits": 0.633676323360163
+    },
+    {
+      "section_a": "stars",
+      "section_b": "text",
+      "jensen_shannon_divergence_bits": 0.47953324768089006
+    },
+    {
+      "section_a": "stars",
+      "section_b": "zodiac",
+      "jensen_shannon_divergence_bits": 0.6102496055949201
+    },
+    {
+      "section_a": "text",
+      "section_b": "zodiac",
+      "jensen_shannon_divergence_bits": 0.6146855682868653
+    }
+  ],
+  "section_vs_position_distance_summary": {
+    "section_min_jsd_bits": 0.3347291601069759,
+    "section_mean_jsd_bits": 0.5554700431523788,
+    "section_max_jsd_bits": 0.7132735389659056,
+    "exp002b_position_distances": {
+      "line_initial_vs_line_medial": {
+        "jensen_shannon_divergence_bits": 0.5052142842100613
+      },
+      "line_final_vs_line_medial": {
+        "jensen_shannon_divergence_bits": 0.43994932334109943
+      },
+      "line_initial_vs_line_final": {
+        "jensen_shannon_divergence_bits": 0.674520700840175
+      }
+    },
+    "exp002b_position_min_jsd_bits": 0.43994932334109943,
+    "exp002b_position_mean_jsd_bits": 0.5398947694637786,
+    "exp002b_position_max_jsd_bits": 0.674520700840175
+  },
+  "artifacts": [
+    "run_summary.json",
+    "parser_audit.json",
+    "section_summary.csv",
+    "section_summary.json",
+    "section_token_counts.csv",
+    "section_token_shares.csv",
+    "section_token_overrepresentation.csv",
+    "top_tokens_by_section.csv",
+    "pairwise_section_distances.csv",
+    "pairwise_section_distances.json",
+    "unmapped_lines.csv",
+    "section_vs_position_distance_comparison.csv",
+    "section_vs_position_distance_comparison.json",
+    "plots/section_token_counts.png",
+    "plots/section_ttr_entropy.png",
+    "plots/pairwise_section_distances_heatmap.png"
+  ]
+}

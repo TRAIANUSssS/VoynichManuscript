@@ -20,6 +20,17 @@ Processed data should be stored under `data/processed/` with transformation note
 
 No processed data has been created yet.
 
+## Metadata
+
+Current metadata:
+
+- `data/metadata/folio_sections.csv`
+  - Source: IVTFF page header parsable information in `data/raw/LSI_ivtff_0d.txt`
+  - Source documentation: https://www.voynich.nu/transcr.html
+  - Created: 2026-06-21
+  - Used by: `exp-003_section-frequency-comparison_active_2026-06-21`
+  - Known issue: section labels are IVTFF `$I` illustration-type categories, not independently verified section taxonomy.
+
 ## External Corpora
 
 External corpora will be used for baseline comparison only after provenance, license/status, and preprocessing steps are documented.
