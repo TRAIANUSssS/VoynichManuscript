@@ -10,7 +10,7 @@ The goal is to create a durable research memory. The project should preserve obs
 
 ## Current Status
 
-Status: baseline, line-position, cleaned-parser, and section-frequency experiments completed and consolidated on 2026-06-21.
+Status: baseline, line-position, cleaned-parser, section-frequency, and section-frequency resampling-control experiments completed on 2026-06-21.
 
 Initial raw transcription source has been added for `exp-001`: `data/raw/LSI_ivtff_0d.txt`, documented in `datasets/voynich_sources.md` and `methods/transcription_policy.md`.
 
@@ -47,6 +47,7 @@ Initial hypotheses are open concepts, not conclusions.
 - `experiments/exp-002_word-position-patterns_active_2026-06-21/` - line-position token distribution run completed once; parser-markup limitation needs follow-up.
 - `experiments/exp-002b_clean-ivtff-parser-rerun_active_2026-06-21/` - parser-focused rerun completed; old and cleaned outputs compared.
 - `experiments/exp-003_section-frequency-comparison_active_2026-06-21/` - section-frequency comparison completed using IVTFF `$I` metadata.
+- `experiments/exp-004_section-frequency-resampling-control_active_2026-06-21/` - matched-token-count control completed for the `exp-003` section-frequency result.
 
 ## Recent Important Decisions
 
@@ -56,10 +57,10 @@ Initial hypotheses are open concepts, not conclusions.
 - 2026-06-21: For cleaned IVTFF parsing, replace inline `<...>` markup with token boundaries before normalization.
 - 2026-06-21: Use IVTFF `$I` page-header illustration type as the source-derived section metadata for `exp-003`.
 - 2026-06-21: Treat `exp-003` section-frequency results as exploratory until matched-token-count resampling or bootstrap controls are run.
+- 2026-06-21: After `exp-004`, prefer pairwise matched-size JSD for pair-specific section comparison and keep common-size resampling as a global stress test.
 
 ## Next Steps
 
-- Recommended next experiment: `exp-004_section-frequency-resampling-control`.
-- Test whether `exp-003` section-frequency differences remain visible after matched-token-count resampling or bootstrap controls.
-- Later follow-up: control section comparisons for Currier language, hand, line position, and folio/quire structure.
+- Next follow-up: control section comparisons for Currier language, hand, line position, and folio/quire structure.
+- Optional method follow-up: add a pooled-label null control for section-pair JSD.
 - Add verified sources for manuscript background notes.

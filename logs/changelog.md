@@ -53,3 +53,11 @@
 - Recorded that cleaned parser policy remains the recommended default for future text-statistics experiments unless a later protocol replaces it.
 - Recorded that `exp-003` section-frequency results are exploratory until matched-token-count resampling or bootstrap controls are run.
 - Recorded `exp-004_section-frequency-resampling-control` as the recommended next experiment without creating `exp-004`.
+
+## 2026-06-21 - Ran exp-004 section-frequency resampling control
+
+- Added `scripts/exp004_section_frequency_resampling_control.py`.
+- Generated `artifacts/exp004/` resampling-control CSV and JSON outputs.
+- Created `experiments/exp-004_section-frequency-resampling-control_active_2026-06-21/` with protocol, results, findings, artifact index, and questions.
+- Updated project navigation, script/artifact indexes, decision log, and session summary.
+- Preserved all earlier experiment directories and artifacts unchanged.

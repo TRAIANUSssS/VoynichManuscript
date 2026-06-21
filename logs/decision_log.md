@@ -111,3 +111,17 @@ Do not create `exp-004` until a task packet or explicit instruction requests it.
 
 Open questions:
 Which resampling design, number of bootstrap iterations, and comparison metrics should be used.
+
+## 2026-06-21 - Prefer pairwise matched-size control for pair-specific section comparison
+
+Decision:
+After `exp-004`, keep common-size resampling as a global stress test but prefer pairwise matched-size JSD when comparing individual section pairs.
+
+Reason:
+The `exp-004` run showed that forcing every pair to the `850`-token `astronomical` floor can inflate distances for larger section pairs. Pairwise matched-size resampling stayed closer to the observed `exp-003` values for large-large comparisons such as `herbal` vs `stars` and `cosmological` vs `pharmaceutical`.
+
+Consequences:
+Future section-comparison writeups should report which control they use and should not treat global common-size and pairwise matched-size results as interchangeable. Pairwise matched-size results are better suited to pair-specific interpretation, while common-size results remain useful as a conservative all-sections-at-once control.
+
+Open questions:
+Whether a pooled-label null control should become a required companion to pairwise matched-size JSD.

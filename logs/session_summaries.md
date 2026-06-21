@@ -154,3 +154,20 @@ Open questions:
 
 Next actions:
 ...
+
+## 2026-06-21 - exp-004 section-frequency resampling control
+
+Context:
+`exp-003` found measurable section-level token-frequency differences, but the section token counts were highly uneven and needed matched-token-count controls before interpretation.
+
+What was done:
+Added `scripts/exp004_section_frequency_resampling_control.py`, reused the cleaned `exp-002b` parser policy and the `exp-003` folio-to-section metadata, ran 1,000-iteration common-size and pairwise matched-size resampling controls on transcriber code `H`, and created the `exp-004` experiment documentation and artifact set.
+
+Results:
+The run completed without runtime errors. All 5,216 selected `H` lines mapped to section metadata. The global common sample size was 850 tokens. Observed `exp-003` mean pairwise JSD was 0.5554700431523788 bits; `exp-004` common-size mean pairwise JSD was 0.6479551071976217 bits; pairwise matched mean pairwise JSD was 0.5870200377032155 bits. The smallest and largest section pairs remained `biological` vs `stars` and `astronomical` vs `biological`.
+
+Open questions:
+How much of the remaining section signal is explained by Currier language, hand, line position, or other metadata? Should pairwise matched-size JSD become the default pair-specific control? Should a pooled-label null control be required for stronger inference?
+
+Next actions:
+Add Currier-language and hand interaction controls, then consider a pooled-label null control for section-pair JSD.

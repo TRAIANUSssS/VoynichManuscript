@@ -1,0 +1,108 @@
+{
+  "experiment": "exp-004_section-frequency-resampling-control",
+  "run_date_utc": "2026-06-21T18:57:05+00:00",
+  "script": "scripts/exp004_section_frequency_resampling_control.py",
+  "input": "data/raw/LSI_ivtff_0d.txt",
+  "input_sha256": "3f3f2af18cde10efe75c582f49b07b651c3397022fcbfa5854fecc424c121afa",
+  "metadata": "data/metadata/folio_sections.csv",
+  "metadata_created_by_script": false,
+  "metadata_source": "Reuse exp-003 folio-to-section mapping derived from IVTFF page headers ($I illustration type).",
+  "output": "artifacts/exp004",
+  "parameters": {
+    "transcriber_code": "H",
+    "iterations": 1000,
+    "seed": 20260621,
+    "common_sample_size_mode": "auto",
+    "pairwise_sample_size_mode": "auto",
+    "min_count": 10,
+    "top_n": 30,
+    "parser_policy": "cleaned exp-002b policy: remove comments, replace inline <...> markup with token boundaries, split on periods/commas/whitespace, lowercase and strip non-ASCII letters",
+    "sampling_mode": "without replacement within each section sample"
+  },
+  "parse_stats": {
+    "input_lines": 38939,
+    "data_lines": 17344,
+    "selected_lines": 5216,
+    "non_empty_selected_lines": 5207,
+    "mapped_selected_lines": 5216,
+    "lines_with_angle_tags": 2229,
+    "angle_tags_removed": 4467,
+    "discarded_empty_tokens": 78,
+    "empty_selected_lines": 9,
+    "unique_angle_tag_forms_removed": 111
+  },
+  "section_count": 8,
+  "sections": [
+    "astronomical",
+    "biological",
+    "cosmological",
+    "herbal",
+    "pharmaceutical",
+    "stars",
+    "text",
+    "zodiac"
+  ],
+  "section_token_counts": [
+    {
+      "section": "astronomical",
+      "line_count": 240,
+      "token_count": 850
+    },
+    {
+      "section": "biological",
+      "line_count": 917,
+      "token_count": 6918
+    },
+    {
+      "section": "cosmological",
+      "line_count": 323,
+      "token_count": 2550
+    },
+    {
+      "section": "herbal",
+      "line_count": 1630,
+      "token_count": 11418
+    },
+    {
+      "section": "pharmaceutical",
+      "line_count": 456,
+      "token_count": 2579
+    },
+    {
+      "section": "stars",
+      "line_count": 1083,
+      "token_count": 10694
+    },
+    {
+      "section": "text",
+      "line_count": 223,
+      "token_count": 1626
+    },
+    {
+      "section": "zodiac",
+      "line_count": 335,
+      "token_count": 1332
+    }
+  ],
+  "common_sample_size": 850,
+  "observed_exp003_pairwise_jsd_available": true,
+  "observed_exp003_mean_pairwise_jsd_bits": 0.5554700431523788,
+  "common_size_mean_pairwise_jsd_bits": 0.6479551071976217,
+  "pairwise_matched_mean_pairwise_jsd_bits": 0.5870200377032155,
+  "null_control": {
+    "implemented": false,
+    "status": "todo"
+  },
+  "artifacts": [
+    "run_summary.json",
+    "section_token_counts.csv",
+    "common_size_resampling_summary.csv",
+    "common_size_resampling_summary.json",
+    "common_size_pairwise_jsd.csv",
+    "common_size_pairwise_jsd.json",
+    "pairwise_matched_jsd.csv",
+    "pairwise_matched_jsd.json",
+    "observed_vs_resampled_jsd.csv",
+    "unmapped_lines.csv"
+  ]
+}
