@@ -402,3 +402,88 @@ The result weakens the idea that Currier A/B composition fully explains the test
 
 Next actions:
 Audit Currier metadata coverage before treating the current within-Currier scope as final, then test hand, quire, layout, line position, and matched-size within-Currier controls.
+
+## 2026-06-21 - exp-007 consolidation
+
+### Scope
+
+Summarize:
+
+- `exp-007_section-label-null-control-within-currier`
+- its relationship to `exp-006_currier-section-interaction-control`
+- its relationship to `exp-003` through `exp-005` section-frequency results
+- implications for future source-of-signal experiments
+
+### Observations
+
+OBS:
+- `exp-007` used transcriber code `H` and the cleaned parser policy from `exp-002b`.
+- `exp-007` used section metadata from `data/metadata/folio_sections.csv` and Currier metadata from `data/metadata/folio_currier.csv`.
+- `exp-007` ran with 1000 iterations, seed `20260621`, and minimum section group size `100` tokens.
+- All 5,216 selected `H` lines were mapped to sections.
+- 4,464 selected `H` lines had valid Currier labels.
+- 752 selected `H` lines had blank or unmapped Currier labels.
+- Currier A had 3 valid section groups: `herbal`, `pharmaceutical`, and `text`.
+- Currier A observed mean JSD was 0.5355956685429015.
+- Currier A null mean was 0.38805169568795816.
+- Currier A null 97.5% quantile was 0.39941216554950554.
+- Currier B had 5 valid section groups: `biological`, `cosmological`, `herbal`, `stars`, and `text`.
+- Currier B observed mean JSD was 0.46397711540843006.
+- Currier B null mean was 0.3449325698805918.
+- Currier B null 97.5% quantile was 0.35311149369219175.
+- All 13 valid pairwise comparisons inside Currier groups were above the 97.5% null quantile.
+- The final summary label was `section_signal_above_null_in_both_currier_groups`.
+
+### Interpretations
+
+INF:
+- Section labels preserve non-random token-frequency structure inside both Currier A and Currier B under this null model.
+- Currier A/B composition alone is unlikely to fully explain the section-level signal.
+- `exp-007` strengthens the claim that some section-level signal remains after fixing Currier category.
+- The source of the remaining signal is still unresolved.
+- Currier A results are useful but coverage-limited because only 3 valid section groups passed the token threshold.
+
+### Hypotheses / Open Possibilities
+
+HYP:
+- Remaining section-level signal may reflect scribal hand, folio or quire structure, layout effects, line-position effects, transcription choices, metadata effects, or a combination of factors.
+- Some section-level differences may remain independently of Currier A/B, but this does not imply meaning or language identity.
+- Blank Currier labels may still affect coverage and should be remembered as a metadata limitation.
+
+### Limitations
+
+TODO / ERR:
+- Do not treat within-Currier null-control success as evidence of meaning, translation, language identity, authorship, or decipherment.
+- Do not mark any hypothesis as confirmed or rejected.
+- Currier A has only three valid section groups.
+- 752 selected `H` lines remain blank or unmapped for Currier.
+- `astronomical` and `zodiac` cannot be evaluated under the current Currier mapping.
+- Matched-size within-Currier null controls were not implemented.
+- Hand, quire, layout, and folio-neighborhood controls are still needed.
+
+### Current Research State
+
+The section-level token-frequency signal is:
+
+- reproducible under the cleaned parser
+- robust to token-count matching
+- stronger than expected under global random section-label assignment
+- partly confounded with Currier language
+- still above null inside both Currier A and Currier B under `exp-007`
+
+However, the source of the signal remains unresolved.
+
+### Next Recommended Experiment
+
+Recommended next experiment:
+`exp-008_hand-section-interaction-control`
+
+Purpose:
+Test whether the remaining section-level token-frequency signal is partly explained by scribal hand, and whether section-label effects remain visible after accounting for hand.
+
+Alternative / supporting future controls:
+
+- quire-section interaction control
+- layout or folio-neighborhood control
+- matched-size within-Currier null control
+- Currier metadata coverage audit

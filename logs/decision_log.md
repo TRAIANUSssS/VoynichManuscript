@@ -293,3 +293,17 @@ Hand-section and layout/quire controls remain important follow-ups, but Currier 
 
 Open questions:
 Whether a cited external or source-derived metadata reference can resolve any blank Currier labels without guessing.
+
+## 2026-06-23 - Prioritize hand-section interaction after exp-007
+
+Decision:
+Use `exp-008_hand-section-interaction-control` as the recommended next experiment after the `exp-007` consolidation.
+
+Reason:
+`exp-007` showed that valid section groups remain above the tested section-label null model inside both Currier A and Currier B. This weakens Currier A/B composition as a complete explanation, so the next major unresolved confounder is scribal hand.
+
+Consequences:
+Future work should test whether the remaining section-level token-frequency signal is partly explained by hand and whether section-label effects remain visible after accounting for hand. Currier metadata coverage audit, quire/layout controls, and matched-size within-Currier null controls remain supporting follow-ups.
+
+Open questions:
+Whether hand metadata coverage is sufficient for the same level of controlled section-label testing.

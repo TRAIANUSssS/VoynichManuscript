@@ -67,7 +67,7 @@ Initial hypotheses are open concepts, not conclusions.
 
 ## Next Steps
 
-- Recommended next task: `exp-008_currier-metadata-coverage-audit`.
-- Purpose: audit the 752 blank Currier lines and sections without valid Currier-labeled tokens before broader source-of-signal controls.
-- Later follow-up: hand-section interaction control, matched-size within-Currier section resampling, and controls for line position, folio structure, and quire structure.
+- Recommended next experiment: `exp-008_hand-section-interaction-control`.
+- Purpose: test whether the remaining section-level token-frequency signal is partly explained by scribal hand, and whether section-label effects remain visible after accounting for hand.
+- Later follow-up: Currier metadata coverage audit, matched-size within-Currier section resampling, quire-section interaction control, and layout or folio-neighborhood controls.
 - Add verified sources for manuscript background notes.

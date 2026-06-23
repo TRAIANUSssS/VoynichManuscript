@@ -110,3 +110,9 @@
 - Created `experiments/exp-007_section-label-null-control-within-currier_active_2026-06-21/` with protocol, results, findings, artifact index, and questions.
 - Updated project navigation, script/artifact indexes, decision log, and session summary.
 - Preserved all earlier experiment directories and artifacts unchanged.
+
+## 2026-06-23 - Consolidated exp-007 project-level summary
+
+- Added a milestone-level `exp-007` consolidation summary in OBS/INF/HYP/TODO form.
+- Recorded that section-label signal remains above the tested null inside both Currier A and Currier B.
+- Recorded `exp-008_hand-section-interaction-control` as the recommended next experiment, with Currier coverage, quire, layout, folio-neighborhood, and matched-size within-Currier controls as follow-ups.
