@@ -14,3 +14,4 @@ Current artifact sets:
 - `exp005/` - section-label null-control outputs for `exp-005_section-label-null-control_active_2026-06-21`.
 - `exp006/` - Currier-section interaction-control outputs for `exp-006_currier-section-interaction-control_active_2026-06-21`.
 - `exp007/` - within-Currier section-label null-control outputs for `exp-007_section-label-null-control-within-currier_active_2026-06-21`.
+- `exp008/` - hand-section interaction-control outputs for `exp-008_hand-section-interaction-control_active_2026-06-21`.

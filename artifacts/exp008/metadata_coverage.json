@@ -1,0 +1,43 @@
+{
+  "input_line_count": 38939,
+  "selected_transcriber_code": "H",
+  "selected_line_count": 5216,
+  "non_empty_selected_line_count": 5207,
+  "section_mapped_line_count": 5216,
+  "unmapped_section_line_count": 0,
+  "hand_mapped_line_count": 3134,
+  "unmapped_hand_line_count": 2082,
+  "both_mapped_line_count": 3134,
+  "section_count": 8,
+  "hand_category_count": 7,
+  "section_names": [
+    "astronomical",
+    "biological",
+    "cosmological",
+    "herbal",
+    "pharmaceutical",
+    "stars",
+    "text",
+    "zodiac"
+  ],
+  "hand_category_names": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "X",
+    "Y"
+  ],
+  "unknown_hand_labels_treated_as_unmapped": [
+    "",
+    "-",
+    "?"
+  ],
+  "min_tokens_per_group": 100,
+  "dominant_section_count_at_90_percent": 1,
+  "section_only_recomputed_mean_jsd_bits": 0.5554700431523788,
+  "exp003_reference_mean_jsd_bits": 0.5554700431523788,
+  "exp003_reference_difference_bits": 0.0,
+  "overall_signal_label": "section_signal_preserved_within_hand"
+}

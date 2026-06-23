@@ -1,0 +1,9 @@
+section,dominant_hand,dominant_hand_token_count,section_token_count,dominant_hand_token_share,dominant_at_90_percent
+astronomical,,0,850,0.0,False
+biological,2,6918,6918,1.0,True
+cosmological,3,1487,2550,0.5831372549019608,False
+herbal,1,7060,11418,0.6183219478017166,False
+pharmaceutical,4,296,2579,0.11477316789453276,False
+stars,X,2741,10694,0.25631195062651957,False
+text,3,333,1626,0.2047970479704797,False
+zodiac,,0,1332,0.0,False

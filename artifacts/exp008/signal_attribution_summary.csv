@@ -1,0 +1,7 @@
+comparison_level,mean_jsd_bits,valid_comparison_count,token_coverage,reference_mean_jsd_bits,notes
+section_only_recomputed,0.5554700431523788,28,37967,0.5554700431523788,Internal exp-008 replication check of full section distances.
+hand_only,0.5822290801216097,21,23719,,Only hand groups with at least 100 tokens are used for pairwise distances.
+section_within_hand,0.5681240941907049,4,23719,,Pairwise section JSD computed inside each hand category.
+hand_within_section,0.6461215587388383,8,23719,,Pairwise hand JSD computed inside each section where enough hand groups exist.
+within_hand_section_label_null,,0,,,0 of 0 feasible hand categories were above their 97.5% section-label null quantile.
+overall,,4,23719,,section_signal_preserved_within_hand

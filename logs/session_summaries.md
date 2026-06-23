@@ -487,3 +487,47 @@ Alternative / supporting future controls:
 - layout or folio-neighborhood control
 - matched-size within-Currier null control
 - Currier metadata coverage audit
+
+## 2026-06-23 - exp-008 hand-section interaction control
+
+Context:
+`exp-008` followed the section-frequency, Currier-control, and within-Currier null-control sequence. The goal was to test whether section-level token-frequency differences remain visible after accounting for IVTFF `$H` hand categories.
+
+What was done:
+- Added `scripts/exp008_hand_section_interaction_control.py`.
+- Created `data/metadata/folio_hands.csv` from IVTFF page-header `$H` metadata.
+- Generated `artifacts/exp008/` coverage, hand-only, section-only, section-within-hand, hand-within-section, within-hand null-control, and signal-attribution artifacts.
+- Created `experiments/exp-008_hand-section-interaction-control_active_2026-06-21/` with README, protocol, results, findings, artifact index, and questions.
+- Updated project navigation, script/artifact/metadata indexes, dataset documentation, decision log, and changelog.
+
+Results:
+- Selected `H` lines: `5216`.
+- Section-mapped selected lines: `5216`.
+- Hand-mapped selected lines: `3134`.
+- Unmapped hand selected lines: `2082`.
+- Hand categories: `1`, `2`, `3`, `4`, `5`, `X`, `Y`.
+- Section-only recomputed mean JSD: `0.5554700431523788`.
+- Historical `exp-003` reference mean JSD: `0.5554700431523788`.
+- Hand-only mean JSD: `0.5822290801216097`.
+- Section-within-hand mean JSD: `0.5681240941907049` from `4` valid pairs.
+- Hand-within-section mean JSD: `0.6461215587388383` from `8` valid pairs.
+- Within-hand section-label null controls: `insufficient_data` for every hand category because no hand had at least three valid section groups at the `100` token threshold.
+- Generated summary label: `section_signal_preserved_within_hand`.
+
+Interpretation:
+- OBS: Section-within-hand distances remain measurable for four valid pairs.
+- OBS: The section-only replication exactly matched the `exp-003` reference mean in this run.
+- INF: The generated summary label is coverage-limited because it is based on four valid pairs and no feasible within-hand null distribution.
+- INF: Hand remains a plausible contributor or confounder; this run does not show independence from hand.
+- HYP: The remaining section signal may reflect a combination of section, hand, Currier, quire, folio, layout, line-position, and transcription effects.
+
+Open questions:
+- Can blank hand labels be resolved from a cited source?
+- How sensitive are section-within-hand distances to the `100` token threshold?
+- Do the four available section-within-hand pairs remain measurable under matched-size resampling?
+- Should an independent hand metadata source be added before stronger hand-control interpretation?
+
+Next actions:
+- Run hand metadata coverage or threshold-sensitivity checks before stronger claims about hand and section interaction.
+- Consider matched-size within-hand section resampling for the four available pairs.
+- Continue with quire, layout, folio-neighborhood, and line-position controls after hand metadata limitations are clarified.

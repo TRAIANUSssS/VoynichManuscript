@@ -1,0 +1,12 @@
+hand,inner_group,line_count,token_count,min_tokens_per_group,status
+1,herbal,1111,7060,100,valid
+1,text,28,213,100,valid
+2,biological,917,6918,100,valid
+2,herbal,304,2786,100,valid
+3,cosmological,153,1487,100,valid
+3,text,35,333,100,valid
+4,herbal,100,579,100,valid
+4,pharmaceutical,61,296,100,valid
+5,herbal,61,546,100,valid
+X,stars,282,2741,100,valid
+Y,stars,75,760,100,valid

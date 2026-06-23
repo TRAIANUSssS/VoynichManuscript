@@ -1,0 +1,12 @@
+section,inner_group,line_count,token_count,min_tokens_per_group,status
+biological,2,917,6918,100,valid
+cosmological,3,153,1487,100,valid
+herbal,1,1111,7060,100,valid
+herbal,2,304,2786,100,valid
+herbal,4,100,579,100,valid
+herbal,5,61,546,100,valid
+pharmaceutical,4,61,296,100,valid
+stars,X,282,2741,100,valid
+stars,Y,75,760,100,valid
+text,1,28,213,100,valid
+text,3,35,333,100,valid

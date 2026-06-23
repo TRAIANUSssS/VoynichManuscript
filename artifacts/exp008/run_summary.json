@@ -1,0 +1,329 @@
+{
+  "experiment": "exp-008_hand-section-interaction-control",
+  "run_date_utc": "2026-06-23T12:50:20+00:00",
+  "script": "scripts/exp008_hand_section_interaction_control.py",
+  "input": "data/raw/LSI_ivtff_0d.txt",
+  "input_sha256": "3f3f2af18cde10efe75c582f49b07b651c3397022fcbfa5854fecc424c121afa",
+  "section_metadata": "data/metadata/folio_sections.csv",
+  "section_metadata_created_by_script": false,
+  "hand_metadata": "data/metadata/folio_hands.csv",
+  "hand_metadata_created_by_script": false,
+  "currier_metadata": "data/metadata/folio_currier.csv",
+  "metadata_source": "IVTFF page-header metadata in data/raw/LSI_ivtff_0d.txt; $I for section labels, $H for Currier hand, and optional $L for Currier coverage planning; source documentation https://www.voynich.nu/transcr.html",
+  "output": "artifacts/exp008",
+  "parameters": {
+    "transcriber_code": "H",
+    "iterations": 1000,
+    "seed": 20260621,
+    "min_tokens_per_group": 100,
+    "min_count": 10,
+    "top_n": 30,
+    "parser_policy": "cleaned exp-002b policy: remove comments, replace inline <...> markup with token boundaries, split on periods/commas/whitespace, lowercase and strip non-ASCII letters",
+    "hand_mapping_policy": "Use documented IVTFF page-header $H labels; treat blank, ? and - as unmapped for hand-controlled comparisons.",
+    "within_hand_section_label_null": "pool valid section-group tokens inside each hand category and randomly reassign section labels preserving observed group sizes",
+    "optional_matched_size_within_hand_resampling": "not implemented in this run",
+    "optional_hand_label_null_within_sections": "not implemented in this run",
+    "optional_section_currier_hand_summary": "implemented as coverage only; no three-way model was run"
+  },
+  "parse_stats": {
+    "input_lines": 38939,
+    "data_lines": 17344,
+    "selected_lines": 5216,
+    "non_empty_selected_lines": 5207,
+    "section_mapped_selected_lines": 5216,
+    "hand_mapped_selected_lines": 3134,
+    "both_mapped_selected_lines": 3134,
+    "lines_with_angle_tags": 2229,
+    "angle_tags_removed": 4467,
+    "discarded_empty_tokens": 78,
+    "empty_selected_lines": 9,
+    "unmapped_hand_selected_lines": 2082,
+    "unique_angle_tag_forms_removed": 111
+  },
+  "metadata_coverage": {
+    "input_line_count": 38939,
+    "selected_transcriber_code": "H",
+    "selected_line_count": 5216,
+    "non_empty_selected_line_count": 5207,
+    "section_mapped_line_count": 5216,
+    "unmapped_section_line_count": 0,
+    "hand_mapped_line_count": 3134,
+    "unmapped_hand_line_count": 2082,
+    "both_mapped_line_count": 3134,
+    "section_count": 8,
+    "hand_category_count": 7,
+    "section_names": [
+      "astronomical",
+      "biological",
+      "cosmological",
+      "herbal",
+      "pharmaceutical",
+      "stars",
+      "text",
+      "zodiac"
+    ],
+    "hand_category_names": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "X",
+      "Y"
+    ],
+    "unknown_hand_labels_treated_as_unmapped": [
+      "",
+      "-",
+      "?"
+    ],
+    "min_tokens_per_group": 100,
+    "dominant_section_count_at_90_percent": 1,
+    "section_only_recomputed_mean_jsd_bits": 0.5554700431523788,
+    "exp003_reference_mean_jsd_bits": 0.5554700431523788,
+    "exp003_reference_difference_bits": 0.0,
+    "overall_signal_label": "section_signal_preserved_within_hand"
+  },
+  "valid_sections_by_hand": {
+    "1": [
+      "herbal",
+      "text"
+    ],
+    "2": [
+      "biological",
+      "herbal"
+    ],
+    "3": [
+      "cosmological",
+      "text"
+    ],
+    "4": [
+      "herbal",
+      "pharmaceutical"
+    ],
+    "5": [
+      "herbal"
+    ],
+    "X": [
+      "stars"
+    ],
+    "Y": [
+      "stars"
+    ]
+  },
+  "valid_hands_by_section": {
+    "biological": [
+      "2"
+    ],
+    "cosmological": [
+      "3"
+    ],
+    "herbal": [
+      "1",
+      "2",
+      "4",
+      "5"
+    ],
+    "pharmaceutical": [
+      "4"
+    ],
+    "stars": [
+      "X",
+      "Y"
+    ],
+    "text": [
+      "1",
+      "3"
+    ]
+  },
+  "within_hand_null_summary": [
+    {
+      "hand": "1",
+      "valid_section_count": 2,
+      "valid_sections": "herbal;text",
+      "observed_mean_jsd_bits": "",
+      "null_mean_jsd_mean_bits": "",
+      "null_mean_jsd_std_bits": "",
+      "null_mean_jsd_median_bits": "",
+      "null_mean_jsd_q025_bits": "",
+      "null_mean_jsd_q975_bits": "",
+      "observed_minus_null_mean_bits": "",
+      "empirical_percentile": "",
+      "empirical_p_value": "",
+      "conclusion_label": "insufficient_data",
+      "signal_label": "insufficient_data"
+    },
+    {
+      "hand": "2",
+      "valid_section_count": 2,
+      "valid_sections": "biological;herbal",
+      "observed_mean_jsd_bits": "",
+      "null_mean_jsd_mean_bits": "",
+      "null_mean_jsd_std_bits": "",
+      "null_mean_jsd_median_bits": "",
+      "null_mean_jsd_q025_bits": "",
+      "null_mean_jsd_q975_bits": "",
+      "observed_minus_null_mean_bits": "",
+      "empirical_percentile": "",
+      "empirical_p_value": "",
+      "conclusion_label": "insufficient_data",
+      "signal_label": "insufficient_data"
+    },
+    {
+      "hand": "3",
+      "valid_section_count": 2,
+      "valid_sections": "cosmological;text",
+      "observed_mean_jsd_bits": "",
+      "null_mean_jsd_mean_bits": "",
+      "null_mean_jsd_std_bits": "",
+      "null_mean_jsd_median_bits": "",
+      "null_mean_jsd_q025_bits": "",
+      "null_mean_jsd_q975_bits": "",
+      "observed_minus_null_mean_bits": "",
+      "empirical_percentile": "",
+      "empirical_p_value": "",
+      "conclusion_label": "insufficient_data",
+      "signal_label": "insufficient_data"
+    },
+    {
+      "hand": "4",
+      "valid_section_count": 2,
+      "valid_sections": "herbal;pharmaceutical",
+      "observed_mean_jsd_bits": "",
+      "null_mean_jsd_mean_bits": "",
+      "null_mean_jsd_std_bits": "",
+      "null_mean_jsd_median_bits": "",
+      "null_mean_jsd_q025_bits": "",
+      "null_mean_jsd_q975_bits": "",
+      "observed_minus_null_mean_bits": "",
+      "empirical_percentile": "",
+      "empirical_p_value": "",
+      "conclusion_label": "insufficient_data",
+      "signal_label": "insufficient_data"
+    },
+    {
+      "hand": "5",
+      "valid_section_count": 1,
+      "valid_sections": "herbal",
+      "observed_mean_jsd_bits": "",
+      "null_mean_jsd_mean_bits": "",
+      "null_mean_jsd_std_bits": "",
+      "null_mean_jsd_median_bits": "",
+      "null_mean_jsd_q025_bits": "",
+      "null_mean_jsd_q975_bits": "",
+      "observed_minus_null_mean_bits": "",
+      "empirical_percentile": "",
+      "empirical_p_value": "",
+      "conclusion_label": "insufficient_data",
+      "signal_label": "insufficient_data"
+    },
+    {
+      "hand": "X",
+      "valid_section_count": 1,
+      "valid_sections": "stars",
+      "observed_mean_jsd_bits": "",
+      "null_mean_jsd_mean_bits": "",
+      "null_mean_jsd_std_bits": "",
+      "null_mean_jsd_median_bits": "",
+      "null_mean_jsd_q025_bits": "",
+      "null_mean_jsd_q975_bits": "",
+      "observed_minus_null_mean_bits": "",
+      "empirical_percentile": "",
+      "empirical_p_value": "",
+      "conclusion_label": "insufficient_data",
+      "signal_label": "insufficient_data"
+    },
+    {
+      "hand": "Y",
+      "valid_section_count": 1,
+      "valid_sections": "stars",
+      "observed_mean_jsd_bits": "",
+      "null_mean_jsd_mean_bits": "",
+      "null_mean_jsd_std_bits": "",
+      "null_mean_jsd_median_bits": "",
+      "null_mean_jsd_q025_bits": "",
+      "null_mean_jsd_q975_bits": "",
+      "observed_minus_null_mean_bits": "",
+      "empirical_percentile": "",
+      "empirical_p_value": "",
+      "conclusion_label": "insufficient_data",
+      "signal_label": "insufficient_data"
+    }
+  ],
+  "signal_attribution_summary": [
+    {
+      "comparison_level": "section_only_recomputed",
+      "mean_jsd_bits": 0.5554700431523788,
+      "valid_comparison_count": 28,
+      "token_coverage": 37967,
+      "reference_mean_jsd_bits": 0.5554700431523788,
+      "notes": "Internal exp-008 replication check of full section distances."
+    },
+    {
+      "comparison_level": "hand_only",
+      "mean_jsd_bits": 0.5822290801216097,
+      "valid_comparison_count": 21,
+      "token_coverage": 23719,
+      "reference_mean_jsd_bits": "",
+      "notes": "Only hand groups with at least 100 tokens are used for pairwise distances."
+    },
+    {
+      "comparison_level": "section_within_hand",
+      "mean_jsd_bits": 0.5681240941907049,
+      "valid_comparison_count": 4,
+      "token_coverage": 23719,
+      "reference_mean_jsd_bits": "",
+      "notes": "Pairwise section JSD computed inside each hand category."
+    },
+    {
+      "comparison_level": "hand_within_section",
+      "mean_jsd_bits": 0.6461215587388383,
+      "valid_comparison_count": 8,
+      "token_coverage": 23719,
+      "reference_mean_jsd_bits": "",
+      "notes": "Pairwise hand JSD computed inside each section where enough hand groups exist."
+    },
+    {
+      "comparison_level": "within_hand_section_label_null",
+      "mean_jsd_bits": "",
+      "valid_comparison_count": 0,
+      "token_coverage": "",
+      "reference_mean_jsd_bits": "",
+      "notes": "0 of 0 feasible hand categories were above their 97.5% section-label null quantile."
+    },
+    {
+      "comparison_level": "overall",
+      "mean_jsd_bits": "",
+      "valid_comparison_count": 4,
+      "token_coverage": 23719,
+      "reference_mean_jsd_bits": "",
+      "notes": "section_signal_preserved_within_hand"
+    }
+  ],
+  "artifacts": [
+    "run_summary.json",
+    "metadata_coverage.json",
+    "section_hand_contingency_lines.csv",
+    "section_hand_contingency_tokens.csv",
+    "section_hand_percentages.csv",
+    "dominant_hand_by_section.csv",
+    "hand_summary.csv",
+    "hand_token_counts.csv",
+    "hand_token_shares.csv",
+    "top_tokens_by_hand.csv",
+    "pairwise_hand_distances.csv",
+    "section_only_recomputed_distances.csv",
+    "section_within_hand_distances.csv",
+    "section_within_hand_groups.csv",
+    "hand_within_section_distances.csv",
+    "hand_within_section_groups.csv",
+    "within_hand_null_summary.csv",
+    "within_hand_null_summary.json",
+    "within_hand_null_iterations.csv",
+    "pairwise_within_hand_null_control.csv",
+    "pairwise_within_hand_null_control.json",
+    "signal_attribution_summary.csv",
+    "unmapped_section_lines.csv",
+    "unmapped_hand_lines.csv",
+    "section_currier_hand_coverage.csv"
+  ]
+}

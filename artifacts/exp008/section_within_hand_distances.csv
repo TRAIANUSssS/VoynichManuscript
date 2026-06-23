@@ -1,0 +1,5 @@
+hand,section_a,section_b,token_count_a,token_count_b,jensen_shannon_divergence_bits
+1,herbal,text,7060,213,0.6065797757758608
+2,biological,herbal,6918,2786,0.4347931720064342
+3,cosmological,text,1487,333,0.5694432596869899
+4,herbal,pharmaceutical,579,296,0.6616801692935346

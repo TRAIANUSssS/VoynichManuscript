@@ -116,3 +116,12 @@
 - Added a milestone-level `exp-007` consolidation summary in OBS/INF/HYP/TODO form.
 - Recorded that section-label signal remains above the tested null inside both Currier A and Currier B.
 - Recorded `exp-008_hand-section-interaction-control` as the recommended next experiment, with Currier coverage, quire, layout, folio-neighborhood, and matched-size within-Currier controls as follow-ups.
+
+## 2026-06-23 - Ran exp-008 hand-section interaction control
+
+- Added `scripts/exp008_hand_section_interaction_control.py`.
+- Created `data/metadata/folio_hands.csv` from IVTFF page-header `$H` metadata.
+- Generated `artifacts/exp008/` hand-section coverage, hand-only, section-within-hand, hand-within-section, null-control feasibility, and signal-attribution CSV/JSON outputs.
+- Created `experiments/exp-008_hand-section-interaction-control_active_2026-06-21/` with protocol, results, findings, artifact index, and questions.
+- Updated project navigation, script/artifact/metadata indexes, dataset documentation, decision log, and session summary.
+- Preserved all earlier experiment directories and artifacts unchanged.

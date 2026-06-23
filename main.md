@@ -10,7 +10,7 @@ The goal is to create a durable research memory. The project should preserve obs
 
 ## Current Status
 
-Status: baseline, line-position, cleaned-parser, section-frequency, section-frequency resampling-control, section-label null-control, Currier-section interaction-control, and within-Currier section-label null-control experiments completed.
+Status: baseline, line-position, cleaned-parser, section-frequency, section-frequency resampling-control, section-label null-control, Currier-section interaction-control, within-Currier section-label null-control, and hand-section interaction-control experiments completed.
 
 Initial raw transcription source has been added for `exp-001`: `data/raw/LSI_ivtff_0d.txt`, documented in `datasets/voynich_sources.md` and `methods/transcription_policy.md`.
 
@@ -51,6 +51,7 @@ Initial hypotheses are open concepts, not conclusions.
 - `experiments/exp-005_section-label-null-control_active_2026-06-21/` - pooled-label null control completed for observed and matched section-frequency distances.
 - `experiments/exp-006_currier-section-interaction-control_active_2026-06-21/` - Currier-language interaction control completed; section and Currier are strongly confounded in the current metadata slice.
 - `experiments/exp-007_section-label-null-control-within-currier_active_2026-06-21/` - within-Currier section-label null control completed; valid section labels were above the tested null inside both Currier A and Currier B.
+- `experiments/exp-008_hand-section-interaction-control_active_2026-06-21/` - hand-section interaction control completed; section-within-hand distances remain measurable where coverage exists, but within-hand null controls were not feasible because hand-section coverage is sparse.
 
 ## Recent Important Decisions
 
@@ -64,10 +65,11 @@ Initial hypotheses are open concepts, not conclusions.
 - 2026-06-21: After `exp-005`, prefer null-control comparisons over raw observed section JSD when evaluating whether section labels carry measurable information.
 - 2026-06-23: For `exp-006`, use IVTFF page-header `$L` labels as Currier metadata and treat blank, `?`, and `-` labels as unmapped for Currier-controlled comparisons.
 - 2026-06-23: After `exp-007`, treat section signal as still above the tested within-Currier null in valid groups, while keeping Currier coverage gaps and other metadata confounders unresolved.
+- 2026-06-23: For `exp-008`, use IVTFF page-header `$H` labels as hand metadata and treat blank, `?`, and `-` labels as unmapped for hand-controlled comparisons.
 
 ## Next Steps
 
-- Recommended next experiment: `exp-008_hand-section-interaction-control`.
-- Purpose: test whether the remaining section-level token-frequency signal is partly explained by scribal hand, and whether section-label effects remain visible after accounting for hand.
-- Later follow-up: Currier metadata coverage audit, matched-size within-Currier section resampling, quire-section interaction control, and layout or folio-neighborhood controls.
+- Recommended next experiment: `exp-009_hand-metadata-coverage-or-threshold-sensitivity`.
+- Purpose: determine whether the sparse hand-section coverage in `exp-008` can be improved or stress-tested before stronger hand-control interpretation.
+- Later follow-up: matched-size within-hand section resampling, Currier metadata coverage audit, quire-section interaction control, layout controls, folio-neighborhood controls, and line-position controls.
 - Add verified sources for manuscript background notes.

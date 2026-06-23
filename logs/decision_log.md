@@ -307,3 +307,45 @@ Future work should test whether the remaining section-level token-frequency sign
 
 Open questions:
 Whether hand metadata coverage is sufficient for the same level of controlled section-label testing.
+
+## 2026-06-23 - Use IVTFF page-header hand labels for exp-008
+
+Decision:
+Use Currier hand labels from IVTFF page-header `$H` metadata for `exp-008`, stored explicitly in `data/metadata/folio_hands.csv`.
+
+Reason:
+The same raw transcription source used by prior experiments documents `$H` as Currier's hand metadata. Creating an explicit hand metadata file makes the source and mapping auditable without inferring hand from section names or Currier language.
+
+Consequences:
+Hand-controlled comparisons in `exp-008` use source-derived page-header metadata from `data/raw/LSI_ivtff_0d.txt` and cite https://www.voynich.nu/transcr.html. The labels remain experiment metadata, not independent proof of scribal identity, authorship, or textual meaning.
+
+Open questions:
+Whether a separately curated or scholarly hand metadata source should be added later for verification.
+
+## 2026-06-23 - Treat blank hand labels as unmapped in exp-008
+
+Decision:
+For `exp-008`, treat blank, `?`, and `-` hand labels as unmapped for hand-controlled comparisons and write affected selected lines to `artifacts/exp008/unmapped_hand_lines.csv`.
+
+Reason:
+Using unknown or blank labels as if they were hand categories would silently introduce unsupported metadata. Explicit unmapped-line reporting preserves reproducibility.
+
+Consequences:
+The hand-controlled analysis covers 3,134 of 5,216 selected `H` lines. The 2,082 selected lines with blank hand labels are excluded from hand-controlled comparisons but remain documented.
+
+Open questions:
+Whether blank hand labels can be resolved from a cited source before a future rerun.
+
+## 2026-06-23 - Treat exp-008 hand control as coverage-limited
+
+Decision:
+Treat `exp-008` as evidence that section-within-hand distances are measurable where coverage exists, but not as strong evidence that the section signal is independent of hand.
+
+Reason:
+Only four section-within-hand pairs met the configured token threshold, and no hand category had at least three valid section groups for the within-hand section-label null control.
+
+Consequences:
+Future work should prioritize hand metadata coverage, threshold sensitivity, or matched-size within-hand controls before stronger claims about hand and section interaction.
+
+Open questions:
+Whether lowering thresholds, adding independently cited hand metadata, or using pair-specific matched controls changes the interpretation.

@@ -30,6 +30,18 @@ Current metadata:
   - Created: 2026-06-21
   - Used by: `exp-003_section-frequency-comparison_active_2026-06-21`
   - Known issue: section labels are IVTFF `$I` illustration-type categories, not independently verified section taxonomy.
+- `data/metadata/folio_currier.csv`
+  - Source: IVTFF page header `$L` metadata in `data/raw/LSI_ivtff_0d.txt`
+  - Source documentation: https://www.voynich.nu/transcr.html
+  - Created: 2026-06-23
+  - Used by: `exp-006_currier-section-interaction-control_active_2026-06-21`, `exp-007_section-label-null-control-within-currier_active_2026-06-21`
+  - Known issue: blank, `?`, and `-` Currier labels are treated as unmapped in Currier-controlled comparisons.
+- `data/metadata/folio_hands.csv`
+  - Source: IVTFF page header `$H` metadata in `data/raw/LSI_ivtff_0d.txt`
+  - Source documentation: https://www.voynich.nu/transcr.html
+  - Created: 2026-06-23
+  - Used by: `exp-008_hand-section-interaction-control_active_2026-06-21`
+  - Known issue: hand labels are IVTFF source-derived page-header categories, not independently verified hand taxonomy; blank, `?`, and `-` labels are treated as unmapped.
 
 ## External Corpora
 

@@ -1,0 +1,8 @@
+hand,valid_section_count,valid_sections,observed_mean_jsd_bits,null_mean_jsd_mean_bits,null_mean_jsd_std_bits,null_mean_jsd_median_bits,null_mean_jsd_q025_bits,null_mean_jsd_q975_bits,observed_minus_null_mean_bits,empirical_percentile,empirical_p_value,conclusion_label,signal_label
+1,2,herbal;text,,,,,,,,,,insufficient_data,insufficient_data
+2,2,biological;herbal,,,,,,,,,,insufficient_data,insufficient_data
+3,2,cosmological;text,,,,,,,,,,insufficient_data,insufficient_data
+4,2,herbal;pharmaceutical,,,,,,,,,,insufficient_data,insufficient_data
+5,1,herbal,,,,,,,,,,insufficient_data,insufficient_data
+X,1,stars,,,,,,,,,,insufficient_data,insufficient_data
+Y,1,stars,,,,,,,,,,insufficient_data,insufficient_data

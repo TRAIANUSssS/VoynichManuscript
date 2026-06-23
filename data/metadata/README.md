@@ -6,6 +6,7 @@ This directory stores machine-readable metadata used by experiments.
 
 - `folio_sections.csv` - folio-to-section mapping derived from IVTFF page header parsable information in `data/raw/LSI_ivtff_0d.txt`.
 - `folio_currier.csv` - folio-to-Currier-language mapping derived from IVTFF page header `$L` metadata in `data/raw/LSI_ivtff_0d.txt`.
+- `folio_hands.csv` - folio-to-hand mapping derived from IVTFF page header `$H` metadata in `data/raw/LSI_ivtff_0d.txt`.
 
 Source documentation:
 
@@ -15,5 +16,7 @@ Notes:
 
 - Section labels come from IVTFF `$I` illustration type codes.
 - Currier labels come from IVTFF `$L` page-header codes.
+- Hand labels come from IVTFF `$H` page-header codes.
 - Blank, `?`, and `-` Currier labels are treated as unmapped for `exp-006` Currier-controlled comparisons.
+- Blank, `?`, and `-` hand labels are treated as unmapped for `exp-008` hand-controlled comparisons.
 - This metadata should be treated as source-derived experiment metadata, not as an independently verified section taxonomy.
