@@ -251,3 +251,17 @@ Future work should prioritize hand-section interaction controls and constrained 
 
 Open questions:
 How much of the remaining section signal survives hand, quire, folio, and layout controls.
+
+## 2026-06-23 - Prioritize within-Currier section-label null controls after exp-006
+
+Decision:
+Use `exp-007_section-label-null-control-within-currier` as the recommended next experiment after `exp-006`.
+
+Reason:
+`exp-006` showed that Currier language is a strong confounder for section-frequency analysis, while section-within-Currier distances remain measurable where enough data exists. The next methodological need is to test whether section-label effects remain stronger than random section-label assignment separately inside Currier A and Currier B.
+
+Consequences:
+Do not treat the section-level signal as independent of Currier, and do not treat Currier as a complete explanation based on `exp-006` alone. Prioritize within-Currier null controls before hand, quire, layout, or broader source-of-signal controls unless metadata coverage forces an audit first.
+
+Open questions:
+Whether `exp-007_currier-metadata-coverage-audit` should precede the null-control experiment to resolve or better document the 752 blank Currier lines.

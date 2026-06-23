@@ -296,3 +296,92 @@ Currier and section are strongly confounded in this dataset slice. The result do
 
 Next actions:
 Run a hand-section interaction control, then add constrained null controls or matched-size resampling within Currier categories if stronger source-of-signal testing is needed.
+
+## 2026-06-21 - exp-006 consolidation
+
+### Scope
+
+Summarize:
+
+- `exp-006_currier-section-interaction-control`
+- its relationship to `exp-003`, `exp-004`, and `exp-005` section-frequency results
+- implications for future source-of-signal experiments
+
+### Observations
+
+OBS:
+- `exp-006` used transcriber code `H` and the cleaned parser policy from `exp-002b`.
+- `exp-006` reused section mapping logic from `exp-003`, `exp-004`, and `exp-005`.
+- All 5,216 selected `H` lines were mapped to sections.
+- 4,464 selected `H` lines had valid Currier labels.
+- 752 selected `H` lines had blank or unmapped Currier labels.
+- Currier A contained 11,450 tokens, 3,410 unique tokens, TTR 0.2978, entropy 9.8648 bits, and mean token length 4.8651.
+- Currier B contained 23,224 tokens, 4,926 unique tokens, TTR 0.2121, entropy 9.8855 bits, and mean token length 5.1447.
+- Currier A vs Currier B JSD was 0.4743758913991697.
+- Section-by-Currier coverage was highly uneven.
+- `biological` and `stars` were entirely Currier B under the current mapping.
+- `pharmaceutical` was entirely Currier A under the current mapping.
+- `herbal` and `text` contained both Currier A and Currier B tokens.
+- `astronomical` and `zodiac` had no valid Currier-labeled tokens under the current mapping.
+- Full section-only mean JSD from `exp-003` was 0.5554700431523788.
+- Section-within-Currier mean JSD was 0.48050447382407735.
+- Section-within-Currier mean JSD for Currier A was 0.5355956685429015.
+- Section-within-Currier mean JSD for Currier B was 0.46497751540843016.
+- Valid Currier-within-section comparisons were available only for `herbal` and `text`.
+- The generated summary label was `section_currier_strongly_confounded`.
+
+### Interpretations
+
+INF:
+- Currier language is a strong confounder for section-frequency analysis.
+- Section-level differences weaken after Currier control, but do not disappear where enough data exists.
+- Currier likely explains part of the section-level token-frequency signal.
+- Current data do not show that Currier fully explains the section-level signal.
+- Current data also do not show that the section-level signal is independent of Currier.
+- Section and Currier are strongly confounded in the current metadata coverage.
+
+### Hypotheses / Open Possibilities
+
+HYP:
+- The section-level signal may reflect a combination of section category, Currier language, hand, layout, folio or quire structure, and transcription effects.
+- Some section differences may remain inside Currier categories.
+- Some apparent section differences may be indirect reflections of Currier composition.
+- Blank Currier labels may affect coverage and should be audited before stronger claims.
+
+### Limitations
+
+TODO / ERR:
+- Do not treat Currier control as proof of language identity.
+- Do not treat Currier as a complete explanation of the section signal.
+- Do not treat the section signal as independent of Currier without additional controls.
+- Currier metadata coverage is incomplete.
+- Section-by-Currier groups are sparse and uneven.
+- `astronomical` and `zodiac` cannot be evaluated under the current Currier mapping.
+- Currier-within-section analysis is available only for two sections.
+- Additional within-Currier null controls are needed.
+
+### Current Research State
+
+The section-level token-frequency signal is:
+
+- reproducible under the cleaned parser
+- robust to token-count matching
+- stronger than expected under random section-label assignment
+- partly confounded with Currier language
+- not fully explained by Currier based on current available comparisons
+
+However, the source of the signal remains unresolved.
+
+### Next Recommended Experiment
+
+Recommended next experiment:
+`exp-007_section-label-null-control-within-currier`
+
+Purpose:
+Test whether section-label effects remain stronger than random section-label assignment inside Currier A and inside Currier B separately.
+
+Alternative / supporting task:
+`exp-007_currier-metadata-coverage-audit`
+
+Purpose:
+Audit the 752 blank Currier lines and check whether Currier coverage can be improved or documented more precisely before further interaction controls.

@@ -65,7 +65,8 @@ Initial hypotheses are open concepts, not conclusions.
 
 ## Next Steps
 
-- Recommended next experiment: `exp-007_hand-section-interaction-control`.
-- Purpose: test whether scribal hand accounts for additional section-level token-frequency structure after the Currier-control result.
-- Later follow-up: add constrained section-label null controls within Currier categories, matched-size within-Currier section resampling, and controls for line position, folio structure, and quire structure.
+- Recommended next experiment: `exp-007_section-label-null-control-within-currier`.
+- Purpose: test whether section-label effects remain stronger than random section-label assignment inside Currier A and inside Currier B separately.
+- Alternative / supporting task: `exp-007_currier-metadata-coverage-audit`, to audit the 752 blank Currier lines before further interaction controls.
+- Later follow-up: hand-section interaction control, matched-size within-Currier section resampling, and controls for line position, folio structure, and quire structure.
 - Add verified sources for manuscript background notes.
