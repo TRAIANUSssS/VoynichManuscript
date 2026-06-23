@@ -531,3 +531,101 @@ Next actions:
 - Run hand metadata coverage or threshold-sensitivity checks before stronger claims about hand and section interaction.
 - Consider matched-size within-hand section resampling for the four available pairs.
 - Continue with quire, layout, folio-neighborhood, and line-position controls after hand metadata limitations are clarified.
+
+## 2026-06-21 - exp-008 consolidation
+
+### Scope
+
+Summarize:
+
+- `exp-008_hand-section-interaction-control`
+- its relationship to `exp-003` through `exp-007` section-frequency and Currier-control results
+- implications for hand metadata coverage and future source-of-signal experiments
+
+### Observations
+
+OBS:
+- `exp-008` used transcriber code `H` and the cleaned parser policy from `exp-002b`.
+- `exp-008` reused section mapping logic from `exp-003` through `exp-007`.
+- `exp-008` used hand metadata from IVTFF page-header `$H` labels.
+- `exp-008` ran with 1000 iterations, seed `20260621`, and minimum token threshold `100`.
+- All 5,216 selected `H` lines were mapped to sections.
+- 3,134 selected `H` lines had valid hand labels.
+- 2,082 selected `H` lines had blank or unmapped hand labels.
+- `astronomical` and `zodiac` had no valid hand-mapped tokens under the current mapping policy.
+- Valid hand categories were `1`, `2`, `3`, `4`, `5`, `X`, and `Y`.
+- Hand-only mean pairwise JSD was `0.5822290801216097`.
+- Full section-only mean JSD from `exp-003` was `0.5554700431523788`.
+- There were 4 valid section-within-hand comparisons.
+- Section-within-hand mean JSD was `0.5681240941907049`.
+- There were 8 valid hand-within-section comparisons.
+- Hand-within-section mean JSD was `0.6461215587388383`.
+- No hand category had at least three valid section groups with at least 100 tokens each.
+- Strict within-hand section-label null controls were not feasible.
+- The generated experiment label was `section_signal_preserved_within_hand`.
+
+Section-within-hand pair values:
+
+- Hand `1`: `herbal` vs `text` = `0.6065797757758608`
+- Hand `2`: `biological` vs `herbal` = `0.4347931720064342`
+- Hand `3`: `cosmological` vs `text` = `0.5694432596869899`
+- Hand `4`: `herbal` vs `pharmaceutical` = `0.6616801692935346`
+
+### Interpretations
+
+INF:
+- Hand categories show measurable token-frequency differences.
+- Hand is a serious candidate confounder for section-frequency analysis.
+- Available section-within-hand comparisons remain measurable, but the evidence is sparse.
+- The `section_signal_preserved_within_hand` label must be read narrowly because it is based on only 4 valid section-within-hand comparisons and no feasible within-hand section-label null control.
+- `exp-008` does not show that hand fully explains the section-level signal.
+- `exp-008` also does not show that the section-level signal is independent of hand.
+- Current hand metadata coverage is too sparse for strong hand-control conclusions.
+
+### Hypotheses / Open Possibilities
+
+HYP:
+- Some remaining section-level signal may reflect scribal hand or hand-related transcription variation.
+- Some apparent hand-level signal may be entangled with section, Currier, layout, quire, or folio structure.
+- Better hand metadata coverage may change the interpretation of section-within-hand results.
+- The remaining section-level signal may reflect multiple overlapping metadata factors rather than a single source.
+
+### Limitations
+
+TODO / ERR:
+- Do not treat hand-control results as evidence of authorship, language identity, meaning, or decipherment.
+- Do not treat hand as a complete explanation of section-level signal.
+- Do not treat section-level signal as independent of hand.
+- Do not mark any hypothesis as confirmed or rejected.
+- 2,082 selected `H` lines remain blank or unmapped for hand.
+- `astronomical` and `zodiac` cannot be evaluated under current hand mapping.
+- Within-hand section-label null controls were not feasible due to sparse section-by-hand coverage.
+- Additional hand metadata audit is needed before stronger hand-based conclusions.
+
+### Current Research State
+
+The section-level token-frequency signal is:
+
+- reproducible under the cleaned parser
+- robust to token-count matching
+- stronger than expected under global random section-label assignment
+- partly confounded with Currier language
+- still above null inside both Currier A and Currier B under `exp-007`
+- potentially confounded with hand, but current hand metadata coverage is too sparse for strong conclusions
+
+The source of the signal remains unresolved.
+
+### Next Recommended Experiment
+
+Recommended next experiment:
+`exp-009_hand-metadata-coverage-audit`
+
+Purpose:
+Audit the 2,082 blank or unmapped hand-label lines, summarize their distribution by section, folio, and Currier if available, test threshold sensitivity, and determine whether hand metadata coverage can be improved or only documented as a limitation.
+
+Alternative / later controls:
+
+- quire-section interaction control
+- layout or folio-neighborhood control
+- joint Currier-hand coverage summary
+- lower-threshold exploratory within-hand controls

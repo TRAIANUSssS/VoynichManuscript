@@ -69,7 +69,7 @@ Initial hypotheses are open concepts, not conclusions.
 
 ## Next Steps
 
-- Recommended next experiment: `exp-009_hand-metadata-coverage-or-threshold-sensitivity`.
-- Purpose: determine whether the sparse hand-section coverage in `exp-008` can be improved or stress-tested before stronger hand-control interpretation.
+- Recommended next experiment: `exp-009_hand-metadata-coverage-audit`.
+- Purpose: audit the 2,082 blank or unmapped hand-label lines, summarize their distribution by section, folio, and Currier if available, test threshold sensitivity, and decide whether hand metadata coverage can be improved or must remain a documented limitation.
 - Later follow-up: matched-size within-hand section resampling, Currier metadata coverage audit, quire-section interaction control, layout controls, folio-neighborhood controls, and line-position controls.
 - Add verified sources for manuscript background notes.

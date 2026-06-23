@@ -125,3 +125,10 @@
 - Created `experiments/exp-008_hand-section-interaction-control_active_2026-06-21/` with protocol, results, findings, artifact index, and questions.
 - Updated project navigation, script/artifact/metadata indexes, dataset documentation, decision log, and session summary.
 - Preserved all earlier experiment directories and artifacts unchanged.
+
+## 2026-06-23 - Consolidated exp-008 project-level summary
+
+- Added a milestone-level `exp-008` consolidation summary in OBS/INF/HYP/TODO form.
+- Recorded hand as a serious candidate confounder without treating it as a complete explanation or treating the section signal as independent of hand.
+- Recorded that strict within-hand section-label null controls were not feasible because hand-section coverage was sparse.
+- Recorded `exp-009_hand-metadata-coverage-audit` as the recommended next experiment, with quire, layout, folio-neighborhood, joint Currier-hand, and lower-threshold exploratory controls as later candidates.

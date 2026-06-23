@@ -349,3 +349,17 @@ Future work should prioritize hand metadata coverage, threshold sensitivity, or 
 
 Open questions:
 Whether lowering thresholds, adding independently cited hand metadata, or using pair-specific matched controls changes the interpretation.
+
+## 2026-06-23 - Prioritize hand metadata coverage audit after exp-008
+
+Decision:
+Use `exp-009_hand-metadata-coverage-audit` as the recommended next experiment after the `exp-008` consolidation.
+
+Reason:
+`exp-008` showed measurable hand-only, section-within-hand, and hand-within-section token-frequency distances, but 2,082 selected `H` lines had blank or unmapped hand labels and no hand category had enough valid section groups for a strict within-hand section-label null control.
+
+Consequences:
+Future work should audit hand metadata coverage and threshold sensitivity before stronger hand-based interpretation. Hand should be treated as a serious candidate confounder, but not as a complete explanation of the section signal, and the section signal should not be treated as independent of hand based on `exp-008`.
+
+Open questions:
+Whether the blank hand labels can be resolved from cited metadata, whether lower-threshold exploratory controls change the available section-within-hand comparisons, and whether later quire, layout, folio-neighborhood, or joint Currier-hand controls should follow.
