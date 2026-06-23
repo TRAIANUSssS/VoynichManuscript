@@ -1,0 +1,9 @@
+section,currier_language,line_count,token_count,meets_min_tokens
+biological,B,917,6918,True
+cosmological,B,153,1487,True
+herbal,A,1245,7925,True
+herbal,B,378,3445,True
+pharmaceutical,A,456,2579,True
+stars,B,1083,10694,True
+text,A,108,946,True
+text,B,115,680,True

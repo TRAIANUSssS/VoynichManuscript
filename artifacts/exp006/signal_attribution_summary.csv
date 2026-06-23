@@ -1,0 +1,5 @@
+comparison_level,mean_jsd_bits,valid_comparison_count,token_coverage,summary_label
+section_only_recomputed,0.5554700431523788,28,37967,reference
+currier_only,0.4743758913991697,1,34674,currier_reference
+section_within_currier,0.48050447382407735,13,34674,section_currier_strongly_confounded
+currier_within_section,0.6082754348261923,2,34674,within_section_currier_reference

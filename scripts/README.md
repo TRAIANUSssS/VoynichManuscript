@@ -12,3 +12,4 @@ Current scripts:
 - `exp003_section_frequency_comparison.py` - cleaned-parser section frequency comparison using IVTFF-derived folio section metadata.
 - `exp004_section_frequency_resampling_control.py` - common-size and pairwise matched-size resampling controls for `exp-003` section-frequency comparisons.
 - `exp005_section_label_null_control.py` - pooled-label null controls for full-section, matched-size, and global section-label comparisons.
+- `exp006_currier_section_interaction_control.py` - Currier-language and section interaction control using IVTFF page-header `$L` metadata.

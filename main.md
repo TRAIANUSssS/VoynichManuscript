@@ -10,7 +10,7 @@ The goal is to create a durable research memory. The project should preserve obs
 
 ## Current Status
 
-Status: baseline, line-position, cleaned-parser, section-frequency, section-frequency resampling-control, and section-label null-control experiments completed on 2026-06-21.
+Status: baseline, line-position, cleaned-parser, section-frequency, section-frequency resampling-control, section-label null-control, and Currier-section interaction-control experiments completed.
 
 Initial raw transcription source has been added for `exp-001`: `data/raw/LSI_ivtff_0d.txt`, documented in `datasets/voynich_sources.md` and `methods/transcription_policy.md`.
 
@@ -49,6 +49,7 @@ Initial hypotheses are open concepts, not conclusions.
 - `experiments/exp-003_section-frequency-comparison_active_2026-06-21/` - section-frequency comparison completed using IVTFF `$I` metadata.
 - `experiments/exp-004_section-frequency-resampling-control_active_2026-06-21/` - matched-token-count control completed for the `exp-003` section-frequency result.
 - `experiments/exp-005_section-label-null-control_active_2026-06-21/` - pooled-label null control completed for observed and matched section-frequency distances.
+- `experiments/exp-006_currier-section-interaction-control_active_2026-06-21/` - Currier-language interaction control completed; section and Currier are strongly confounded in the current metadata slice.
 
 ## Recent Important Decisions
 
@@ -60,11 +61,11 @@ Initial hypotheses are open concepts, not conclusions.
 - 2026-06-21: Treat `exp-003` section-frequency results as exploratory until matched-token-count resampling or bootstrap controls are run.
 - 2026-06-21: After `exp-004`, prefer pairwise matched-size JSD for pair-specific section comparison and keep common-size resampling as a global stress test.
 - 2026-06-21: After `exp-005`, prefer null-control comparisons over raw observed section JSD when evaluating whether section labels carry measurable information.
+- 2026-06-23: For `exp-006`, use IVTFF page-header `$L` labels as Currier metadata and treat blank, `?`, and `-` labels as unmapped for Currier-controlled comparisons.
 
 ## Next Steps
 
-- Recommended next experiment: `exp-006_currier-section-interaction-control`.
-- Purpose: test whether the IVTFF `$I` section-level token-frequency signal remains after controlling for Currier language categories, or whether the current section signal is largely explained by Currier A/B distribution.
-- Alternative / follow-up: `exp-006_hand-section-interaction-control`.
-- Later follow-up: control section comparisons and null models for line position, folio structure, and quire structure.
+- Recommended next experiment: `exp-007_hand-section-interaction-control`.
+- Purpose: test whether scribal hand accounts for additional section-level token-frequency structure after the Currier-control result.
+- Later follow-up: add constrained section-label null controls within Currier categories, matched-size within-Currier section resampling, and controls for line position, folio structure, and quire structure.
 - Add verified sources for manuscript background notes.

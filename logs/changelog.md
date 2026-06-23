@@ -81,3 +81,18 @@
 - Replaced the brief `exp-005` session entry with a milestone-level consolidation summary in OBS/INF/HYP/TODO form.
 - Recorded that the section signal is non-random under the tested pooled-label null model, while its source remains unresolved.
 - Recorded `exp-006_currier-section-interaction-control` as the recommended next experiment, with hand interaction as an alternative or follow-up.
+
+## 2026-06-23 - Audited exp-005 consolidation summary
+
+- Verified the existing `exp-005` consolidation against the task packet and experiment documentation.
+- Added the documented observed-minus-global-null-mean value to `logs/session_summaries.md`.
+- Did not change historical experiment results, artifacts, or hypothesis statuses.
+
+## 2026-06-23 - Ran exp-006 Currier-section interaction control
+
+- Added `scripts/exp006_currier_section_interaction_control.py`.
+- Created `data/metadata/folio_currier.csv` from IVTFF page-header `$L` metadata.
+- Generated `artifacts/exp006/` Currier coverage, Currier-only, section-within-Currier, Currier-within-section, and signal-attribution CSV/JSON outputs.
+- Created `experiments/exp-006_currier-section-interaction-control_active_2026-06-21/` with protocol, results, findings, artifact index, and questions.
+- Updated project navigation, script/artifact indexes, metadata documentation, decision log, and session summary.
+- Preserved all earlier experiment directories and artifacts unchanged.

@@ -1,0 +1,3 @@
+section,currier_a,currier_b,token_count_a,token_count_b,jensen_shannon_divergence_bits
+herbal,A,B,7925,3445,0.5470516861625053
+text,A,B,946,680,0.6694991834898794

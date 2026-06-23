@@ -1,0 +1,14 @@
+currier_language,section_a,section_b,token_count_a,token_count_b,jensen_shannon_divergence_bits
+A,herbal,pharmaceutical,7925,2579,0.46003087758166394
+A,herbal,text,7925,946,0.5577860920405742
+A,pharmaceutical,text,2579,946,0.5889700360064665
+B,biological,cosmological,6918,1487,0.49426164847168
+B,biological,herbal,6918,3445,0.41441002642597613
+B,biological,stars,6918,10694,0.3347291601069759
+B,biological,text,6918,680,0.5155842339734495
+B,cosmological,herbal,1487,3445,0.4398066233130502
+B,cosmological,stars,1487,10694,0.44214810660239734
+B,cosmological,text,1487,680,0.5593658182320294
+B,herbal,stars,3445,10694,0.39893312086613775
+B,herbal,text,3445,680,0.5024211645291627
+B,stars,text,10694,680,0.5381112515634419

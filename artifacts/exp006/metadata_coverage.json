@@ -1,0 +1,30 @@
+{
+  "selected_line_count": 5216,
+  "non_empty_selected_line_count": 5207,
+  "section_mapped_line_count": 5216,
+  "unmapped_section_line_count": 0,
+  "currier_mapped_line_count": 4464,
+  "unmapped_currier_line_count": 752,
+  "both_mapped_line_count": 4464,
+  "section_names": [
+    "astronomical",
+    "biological",
+    "cosmological",
+    "herbal",
+    "pharmaceutical",
+    "stars",
+    "text",
+    "zodiac"
+  ],
+  "currier_categories": [
+    "A",
+    "B"
+  ],
+  "section_count": 8,
+  "currier_category_count": 2,
+  "unknown_currier_labels_treated_as_unmapped": [
+    "",
+    "-",
+    "?"
+  ]
+}

@@ -12,3 +12,4 @@ Current artifact sets:
 - `exp003/` - section frequency comparison outputs for `exp-003_section-frequency-comparison_active_2026-06-21`.
 - `exp004/` - matched-token-count resampling control outputs for `exp-004_section-frequency-resampling-control_active_2026-06-21`.
 - `exp005/` - section-label null-control outputs for `exp-005_section-label-null-control_active_2026-06-21`.
+- `exp006/` - Currier-section interaction-control outputs for `exp-006_currier-section-interaction-control_active_2026-06-21`.

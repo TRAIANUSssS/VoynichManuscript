@@ -233,6 +233,7 @@ OBS:
 - Global observed mean pairwise JSD was 0.5554700431523788.
 - Global null mean was 0.3788255370327812.
 - Global null 97.5% quantile was 0.38500785795761844.
+- Observed minus global null mean was 0.1766445061195976.
 
 ### Interpretations
 
@@ -278,3 +279,20 @@ Test whether the IVTFF `$I` section-level token-frequency signal remains after c
 
 Alternative / follow-up:
 `exp-006_hand-section-interaction-control`
+
+## 2026-06-23 - exp-006 Currier-section interaction control
+
+Context:
+The project needed a source-of-signal control after `exp-005` showed that IVTFF `$I` section labels preserve non-random token-frequency structure under a pooled-label null model.
+
+What was done:
+Added `scripts/exp006_currier_section_interaction_control.py`, created explicit Currier metadata at `data/metadata/folio_currier.csv`, ran the script with the cleaned parser policy on `data/raw/LSI_ivtff_0d.txt` using transcriber code `H`, and generated artifacts under `artifacts/exp006/`. Created the `exp-006` experiment documentation folder with protocol, results, findings, artifacts, and questions.
+
+Results:
+The run selected 5,216 `H` lines. All selected lines mapped to sections, while 4,464 mapped to valid Currier labels and 752 had blank Currier labels. The recomputed section-only mean pairwise JSD matched `exp-003` at `0.5554700431523788`. Currier A vs B JSD was `0.4743758913991697`. Section-within-Currier mean JSD was `0.48050447382407735` across 13 valid pairs. Currier-within-section mean JSD was `0.6082754348261923` across 2 valid section comparisons.
+
+Open questions:
+Currier and section are strongly confounded in this dataset slice. The result does not identify the source of the section signal and does not support claims about meaning, translation, language identity, authorship, or decipherment.
+
+Next actions:
+Run a hand-section interaction control, then add constrained null controls or matched-size resampling within Currier categories if stronger source-of-signal testing is needed.

@@ -209,3 +209,45 @@ The recommended next experiment is `exp-006_currier-section-interaction-control`
 
 Open questions:
 Whether Currier language or hand explains most of the currently observed section signal.
+
+## 2026-06-23 - Use IVTFF page-header Currier labels for exp-006
+
+Decision:
+Use Currier language labels from IVTFF page-header `$L` metadata for `exp-006`, stored explicitly in `data/metadata/folio_currier.csv`.
+
+Reason:
+The same raw transcription source used for prior experiments documents `$L` as Currier language metadata. Creating an explicit Currier metadata file makes the source and mapping auditable without inferring labels from section names.
+
+Consequences:
+Currier-controlled comparisons in `exp-006` use source-derived page-header metadata from `data/raw/LSI_ivtff_0d.txt` and cite https://www.voynich.nu/transcr.html. The labels remain experiment metadata, not independent proof of language identity.
+
+Open questions:
+Whether a separately curated Currier metadata source should be added later for verification.
+
+## 2026-06-23 - Treat blank Currier labels as unmapped in exp-006
+
+Decision:
+For `exp-006`, treat blank, `?`, and `-` Currier labels as unmapped for Currier-controlled comparisons and write affected lines to `artifacts/exp006/unmapped_currier_lines.csv`.
+
+Reason:
+Using unknown or blank labels as if they were Currier A/B categories would silently introduce unsupported metadata. Explicit unmapped-line reporting preserves reproducibility.
+
+Consequences:
+The Currier-controlled analysis covers 4,464 of 5,216 selected `H` lines. The 752 selected lines with blank Currier labels are excluded from Currier-controlled comparisons but remain documented.
+
+Open questions:
+Whether the blank Currier labels can be resolved from a cited source before a future rerun.
+
+## 2026-06-23 - Treat exp-006 as confounded rather than explanatory
+
+Decision:
+Treat the `exp-006` result as evidence that section and Currier metadata are strongly confounded in the current dataset slice, not as a final explanation of the section signal.
+
+Reason:
+The run found measurable section-within-Currier distances, but section-Currier coverage is sparse: several sections appear only under one valid Currier category, two sections have no valid Currier-labeled tokens, and only `herbal` and `text` support within-section Currier A/B comparisons at the configured threshold.
+
+Consequences:
+Future work should prioritize hand-section interaction controls and constrained null or resampling controls within Currier categories before stronger claims about section structure.
+
+Open questions:
+How much of the remaining section signal survives hand, quire, folio, and layout controls.

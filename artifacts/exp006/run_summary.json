@@ -1,0 +1,229 @@
+{
+  "experiment": "exp-006_currier-section-interaction-control",
+  "run_date_utc": "2026-06-23T08:21:15+00:00",
+  "script": "scripts/exp006_currier_section_interaction_control.py",
+  "input": "data/raw/LSI_ivtff_0d.txt",
+  "input_sha256": "3f3f2af18cde10efe75c582f49b07b651c3397022fcbfa5854fecc424c121afa",
+  "section_metadata": "data/metadata/folio_sections.csv",
+  "section_metadata_created_by_script": false,
+  "currier_metadata": "data/metadata/folio_currier.csv",
+  "currier_metadata_created_by_script": false,
+  "metadata_source": "IVTFF page-header metadata in data/raw/LSI_ivtff_0d.txt; $I for section labels and $L for Currier language; source documentation https://www.voynich.nu/transcr.html",
+  "output": "artifacts/exp006",
+  "parameters": {
+    "transcriber_code": "H",
+    "iterations": 1000,
+    "seed": 20260621,
+    "min_tokens_per_group": 100,
+    "min_count": 10,
+    "top_n": 30,
+    "parser_policy": "cleaned exp-002b policy: remove comments, replace inline <...> markup with token boundaries, split on periods/commas/whitespace, lowercase and strip non-ASCII letters",
+    "currier_mapping_policy": "Use documented IVTFF page-header $L labels; treat blank, ? and - as unmapped for Currier-controlled comparisons.",
+    "optional_controls": "Matched-size within-Currier resampling and nested null controls were not implemented in this run."
+  },
+  "parse_stats": {
+    "input_lines": 38939,
+    "data_lines": 17344,
+    "selected_lines": 5216,
+    "non_empty_selected_lines": 5207,
+    "section_mapped_selected_lines": 5216,
+    "currier_mapped_selected_lines": 4464,
+    "both_mapped_selected_lines": 4464,
+    "lines_with_angle_tags": 2229,
+    "angle_tags_removed": 4467,
+    "discarded_empty_tokens": 78,
+    "empty_selected_lines": 9,
+    "unmapped_currier_selected_lines": 752,
+    "unique_angle_tag_forms_removed": 111
+  },
+  "metadata_coverage": {
+    "selected_line_count": 5216,
+    "non_empty_selected_line_count": 5207,
+    "section_mapped_line_count": 5216,
+    "unmapped_section_line_count": 0,
+    "currier_mapped_line_count": 4464,
+    "unmapped_currier_line_count": 752,
+    "both_mapped_line_count": 4464,
+    "section_names": [
+      "astronomical",
+      "biological",
+      "cosmological",
+      "herbal",
+      "pharmaceutical",
+      "stars",
+      "text",
+      "zodiac"
+    ],
+    "currier_categories": [
+      "A",
+      "B"
+    ],
+    "section_count": 8,
+    "currier_category_count": 2,
+    "unknown_currier_labels_treated_as_unmapped": [
+      "",
+      "-",
+      "?"
+    ]
+  },
+  "section_summary_recomputed": [
+    {
+      "section": "astronomical",
+      "line_count": 240,
+      "token_count": 850,
+      "unique_token_count": 628,
+      "type_token_ratio": 0.7388235294117647,
+      "token_entropy_bits": 9.00256820629607,
+      "mean_token_length": 5.395294117647059,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "biological",
+      "line_count": 917,
+      "token_count": 6918,
+      "unique_token_count": 1550,
+      "type_token_ratio": 0.22405319456490316,
+      "token_entropy_bits": 8.578814525917462,
+      "mean_token_length": 5.012575888985256,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "cosmological",
+      "line_count": 323,
+      "token_count": 2550,
+      "unique_token_count": 1156,
+      "type_token_ratio": 0.4533333333333333,
+      "token_entropy_bits": 9.235654823952277,
+      "mean_token_length": 4.747843137254902,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "herbal",
+      "line_count": 1630,
+      "token_count": 11418,
+      "unique_token_count": 3358,
+      "type_token_ratio": 0.29409703976177964,
+      "token_entropy_bits": 9.880016575194244,
+      "mean_token_length": 4.835698020669119,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "pharmaceutical",
+      "line_count": 456,
+      "token_count": 2579,
+      "unique_token_count": 1139,
+      "type_token_ratio": 0.44164404808065144,
+      "token_entropy_bits": 9.080395878210997,
+      "mean_token_length": 5.0158976347421484,
+      "median_token_length": 5
+    },
+    {
+      "section": "stars",
+      "line_count": 1083,
+      "token_count": 10694,
+      "unique_token_count": 3100,
+      "type_token_ratio": 0.2898821769216383,
+      "token_entropy_bits": 9.847957033756035,
+      "mean_token_length": 5.322049747521975,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "text",
+      "line_count": 223,
+      "token_count": 1626,
+      "unique_token_count": 920,
+      "type_token_ratio": 0.5658056580565806,
+      "token_entropy_bits": 9.261077674818397,
+      "mean_token_length": 5.031980319803198,
+      "median_token_length": 5.0
+    },
+    {
+      "section": "zodiac",
+      "line_count": 335,
+      "token_count": 1332,
+      "unique_token_count": 808,
+      "type_token_ratio": 0.6066066066066066,
+      "token_entropy_bits": 9.082003995987538,
+      "mean_token_length": 5.201951951951952,
+      "median_token_length": 5.0
+    }
+  ],
+  "currier_summary": [
+    {
+      "currier_language": "A",
+      "line_count": 1809,
+      "token_count": 11450,
+      "unique_token_count": 3410,
+      "type_token_ratio": 0.29781659388646287,
+      "token_entropy_bits": 9.864768151461604,
+      "mean_token_length": 4.865065502183406,
+      "median_token_length": 5.0
+    },
+    {
+      "currier_language": "B",
+      "line_count": 2646,
+      "token_count": 23224,
+      "unique_token_count": 4926,
+      "type_token_ratio": 0.21210816396830864,
+      "token_entropy_bits": 9.885541852551832,
+      "mean_token_length": 5.144720978298312,
+      "median_token_length": 5.0
+    }
+  ],
+  "historical_exp003_mean_pairwise_section_jsd_bits": 0.5554700431523788,
+  "recomputed_section_mean_pairwise_jsd_bits": 0.5554700431523788,
+  "currier_only_mean_pairwise_jsd_bits": 0.4743758913991697,
+  "section_within_currier_mean_pairwise_jsd_bits": 0.48050447382407735,
+  "currier_within_section_mean_pairwise_jsd_bits": 0.6082754348261923,
+  "signal_attribution_summary": [
+    {
+      "comparison_level": "section_only_recomputed",
+      "mean_jsd_bits": 0.5554700431523788,
+      "valid_comparison_count": 28,
+      "token_coverage": 37967,
+      "summary_label": "reference"
+    },
+    {
+      "comparison_level": "currier_only",
+      "mean_jsd_bits": 0.4743758913991697,
+      "valid_comparison_count": 1,
+      "token_coverage": 34674,
+      "summary_label": "currier_reference"
+    },
+    {
+      "comparison_level": "section_within_currier",
+      "mean_jsd_bits": 0.48050447382407735,
+      "valid_comparison_count": 13,
+      "token_coverage": 34674,
+      "summary_label": "section_currier_strongly_confounded"
+    },
+    {
+      "comparison_level": "currier_within_section",
+      "mean_jsd_bits": 0.6082754348261923,
+      "valid_comparison_count": 2,
+      "token_coverage": 34674,
+      "summary_label": "within_section_currier_reference"
+    }
+  ],
+  "artifacts": [
+    "run_summary.json",
+    "metadata_coverage.json",
+    "section_currier_contingency_lines.csv",
+    "section_currier_contingency_tokens.csv",
+    "section_currier_percentages.csv",
+    "currier_summary.csv",
+    "currier_token_counts.csv",
+    "currier_token_shares.csv",
+    "top_tokens_by_currier.csv",
+    "pairwise_currier_distances.csv",
+    "section_only_recomputed_distances.csv",
+    "section_within_currier_groups.csv",
+    "section_within_currier_distances.csv",
+    "currier_within_section_groups.csv",
+    "currier_within_section_distances.csv",
+    "signal_attribution_summary.csv",
+    "unmapped_section_lines.csv",
+    "unmapped_currier_lines.csv",
+    "section_summary_recomputed.csv"
+  ]
+}
