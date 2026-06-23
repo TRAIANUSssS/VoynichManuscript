@@ -1,0 +1,313 @@
+{
+  "experiment": "exp-007_section-label-null-control-within-currier",
+  "run_date_utc": "2026-06-23T09:53:23+00:00",
+  "script": "scripts/exp007_section_label_null_control_within_currier.py",
+  "input": "data/raw/LSI_ivtff_0d.txt",
+  "input_sha256": "3f3f2af18cde10efe75c582f49b07b651c3397022fcbfa5854fecc424c121afa",
+  "section_metadata": "data/metadata/folio_sections.csv",
+  "section_metadata_created_by_script": false,
+  "currier_metadata": "data/metadata/folio_currier.csv",
+  "currier_metadata_created_by_script": false,
+  "metadata_source": "IVTFF page-header metadata in data/raw/LSI_ivtff_0d.txt; $I for section labels and $L for Currier language; source documentation https://www.voynich.nu/transcr.html",
+  "output": "artifacts/exp007",
+  "parameters": {
+    "transcriber_code": "H",
+    "iterations": 1000,
+    "seed": 20260621,
+    "min_tokens_per_section": 100,
+    "min_count": 10,
+    "top_n": 30,
+    "parser_policy": "cleaned exp-002b policy: remove comments, replace inline <...> markup with token boundaries, split on periods/commas/whitespace, lowercase and strip non-ASCII letters",
+    "currier_mapping_policy": "Use documented IVTFF page-header $L labels; treat blank, ? and - as unmapped for Currier-controlled comparisons.",
+    "global_within_currier_null": "pool valid section-group tokens inside each Currier category and randomly reassign section labels preserving observed group sizes",
+    "pairwise_within_currier_null": "pool each valid section pair inside Currier and randomly reassign pair labels preserving observed group sizes",
+    "optional_matched_controls": "not implemented in this run"
+  },
+  "parse_stats": {
+    "input_lines": 38939,
+    "data_lines": 17344,
+    "selected_lines": 5216,
+    "non_empty_selected_lines": 5207,
+    "section_mapped_selected_lines": 5216,
+    "currier_mapped_selected_lines": 4464,
+    "both_mapped_selected_lines": 4464,
+    "lines_with_angle_tags": 2229,
+    "angle_tags_removed": 4467,
+    "discarded_empty_tokens": 78,
+    "empty_selected_lines": 9,
+    "unmapped_currier_selected_lines": 752,
+    "unique_angle_tag_forms_removed": 111
+  },
+  "metadata_coverage": {
+    "selected_line_count": 5216,
+    "non_empty_selected_line_count": 5207,
+    "section_mapped_line_count": 5216,
+    "unmapped_section_line_count": 0,
+    "currier_mapped_line_count": 4464,
+    "unmapped_currier_line_count": 752,
+    "both_mapped_line_count": 4464,
+    "section_names": [
+      "astronomical",
+      "biological",
+      "cosmological",
+      "herbal",
+      "pharmaceutical",
+      "stars",
+      "text",
+      "zodiac"
+    ],
+    "currier_controlled_section_names": [
+      "biological",
+      "cosmological",
+      "herbal",
+      "pharmaceutical",
+      "stars",
+      "text"
+    ],
+    "currier_categories": [
+      "A",
+      "B"
+    ],
+    "section_count": 8,
+    "currier_controlled_section_count": 6,
+    "currier_category_count": 2,
+    "unknown_currier_labels_treated_as_unmapped": [
+      "",
+      "-",
+      "?"
+    ],
+    "min_tokens_per_section": 100
+  },
+  "valid_groups_by_currier": [
+    {
+      "currier_language": "A",
+      "section": "herbal",
+      "line_count": 1245,
+      "token_count": 7925,
+      "min_tokens_per_section": 100,
+      "status": "valid"
+    },
+    {
+      "currier_language": "A",
+      "section": "pharmaceutical",
+      "line_count": 456,
+      "token_count": 2579,
+      "min_tokens_per_section": 100,
+      "status": "valid"
+    },
+    {
+      "currier_language": "A",
+      "section": "text",
+      "line_count": 108,
+      "token_count": 946,
+      "min_tokens_per_section": 100,
+      "status": "valid"
+    },
+    {
+      "currier_language": "B",
+      "section": "biological",
+      "line_count": 917,
+      "token_count": 6918,
+      "min_tokens_per_section": 100,
+      "status": "valid"
+    },
+    {
+      "currier_language": "B",
+      "section": "cosmological",
+      "line_count": 153,
+      "token_count": 1487,
+      "min_tokens_per_section": 100,
+      "status": "valid"
+    },
+    {
+      "currier_language": "B",
+      "section": "herbal",
+      "line_count": 378,
+      "token_count": 3445,
+      "min_tokens_per_section": 100,
+      "status": "valid"
+    },
+    {
+      "currier_language": "B",
+      "section": "stars",
+      "line_count": 1083,
+      "token_count": 10694,
+      "min_tokens_per_section": 100,
+      "status": "valid"
+    },
+    {
+      "currier_language": "B",
+      "section": "text",
+      "line_count": 115,
+      "token_count": 680,
+      "min_tokens_per_section": 100,
+      "status": "valid"
+    }
+  ],
+  "excluded_groups_by_currier": [
+    {
+      "currier_language": "A",
+      "section": "astronomical",
+      "line_count": 0,
+      "token_count": 0,
+      "min_tokens_per_section": 100,
+      "reason": "zero_tokens"
+    },
+    {
+      "currier_language": "A",
+      "section": "biological",
+      "line_count": 0,
+      "token_count": 0,
+      "min_tokens_per_section": 100,
+      "reason": "zero_tokens"
+    },
+    {
+      "currier_language": "A",
+      "section": "cosmological",
+      "line_count": 0,
+      "token_count": 0,
+      "min_tokens_per_section": 100,
+      "reason": "zero_tokens"
+    },
+    {
+      "currier_language": "A",
+      "section": "stars",
+      "line_count": 0,
+      "token_count": 0,
+      "min_tokens_per_section": 100,
+      "reason": "zero_tokens"
+    },
+    {
+      "currier_language": "A",
+      "section": "zodiac",
+      "line_count": 0,
+      "token_count": 0,
+      "min_tokens_per_section": 100,
+      "reason": "zero_tokens"
+    },
+    {
+      "currier_language": "B",
+      "section": "astronomical",
+      "line_count": 0,
+      "token_count": 0,
+      "min_tokens_per_section": 100,
+      "reason": "zero_tokens"
+    },
+    {
+      "currier_language": "B",
+      "section": "pharmaceutical",
+      "line_count": 0,
+      "token_count": 0,
+      "min_tokens_per_section": 100,
+      "reason": "zero_tokens"
+    },
+    {
+      "currier_language": "B",
+      "section": "zodiac",
+      "line_count": 0,
+      "token_count": 0,
+      "min_tokens_per_section": 100,
+      "reason": "zero_tokens"
+    }
+  ],
+  "within_currier_null_summary": [
+    {
+      "currier_language": "A",
+      "valid_section_count": 3,
+      "valid_sections": "herbal;pharmaceutical;text",
+      "observed_mean_jsd_bits": 0.5355956685429015,
+      "null_mean_jsd_mean_bits": 0.38805169568795816,
+      "null_mean_jsd_std_bits": 0.0055697390695394955,
+      "null_mean_jsd_median_bits": 0.3879099799087588,
+      "null_mean_jsd_q025_bits": 0.37747830673375826,
+      "null_mean_jsd_q975_bits": 0.39941216554950554,
+      "observed_minus_null_mean_bits": 0.14754397285494336,
+      "empirical_percentile": 1.0,
+      "empirical_p_value": 0.000999000999000999,
+      "conclusion_label": "above_null_97_5",
+      "signal_label": "section_signal_above_null_within_currier"
+    },
+    {
+      "currier_language": "B",
+      "valid_section_count": 5,
+      "valid_sections": "biological;cosmological;herbal;stars;text",
+      "observed_mean_jsd_bits": 0.46397711540843006,
+      "null_mean_jsd_mean_bits": 0.3449325698805918,
+      "null_mean_jsd_std_bits": 0.004246063198320629,
+      "null_mean_jsd_median_bits": 0.34494051164064166,
+      "null_mean_jsd_q025_bits": 0.33619693237799836,
+      "null_mean_jsd_q975_bits": 0.35311149369219175,
+      "observed_minus_null_mean_bits": 0.11904454552783827,
+      "empirical_percentile": 1.0,
+      "empirical_p_value": 0.000999000999000999,
+      "conclusion_label": "above_null_97_5",
+      "signal_label": "section_signal_above_null_within_currier"
+    }
+  ],
+  "pairwise_within_currier_null_control_rows": 13,
+  "signal_summary": [
+    {
+      "scope": "currier",
+      "currier_language": "A",
+      "valid_section_count": 3,
+      "valid_sections": "herbal;pharmaceutical;text",
+      "observed_mean_jsd_bits": 0.5355956685429015,
+      "null_mean_jsd_bits": 0.38805169568795816,
+      "null_q975_bits": 0.39941216554950554,
+      "empirical_p_value": 0.000999000999000999,
+      "conclusion_label": "above_null_97_5",
+      "signal_label": "section_signal_above_null_within_currier"
+    },
+    {
+      "scope": "currier",
+      "currier_language": "B",
+      "valid_section_count": 5,
+      "valid_sections": "biological;cosmological;herbal;stars;text",
+      "observed_mean_jsd_bits": 0.46397711540843006,
+      "null_mean_jsd_bits": 0.3449325698805918,
+      "null_q975_bits": 0.35311149369219175,
+      "empirical_p_value": 0.000999000999000999,
+      "conclusion_label": "above_null_97_5",
+      "signal_label": "section_signal_above_null_within_currier"
+    },
+    {
+      "scope": "overall",
+      "currier_language": "all_valid_currier_categories",
+      "valid_section_count": "",
+      "valid_sections": "",
+      "observed_mean_jsd_bits": "",
+      "null_mean_jsd_bits": "",
+      "null_q975_bits": "",
+      "empirical_p_value": "",
+      "conclusion_label": "",
+      "signal_label": "section_signal_above_null_in_both_currier_groups"
+    }
+  ],
+  "historical_references": {
+    "exp003_full_section_mean_jsd_bits": 0.5554700431523788,
+    "exp006_section_within_currier_mean_jsd_bits": 0.48050447382407735,
+    "exp006_currier_a_section_within_currier_mean_jsd_bits": 0.5355956685429015,
+    "exp006_currier_b_section_within_currier_mean_jsd_bits": 0.46397711540843006
+  },
+  "artifacts": [
+    "run_summary.json",
+    "metadata_coverage.json",
+    "section_currier_group_counts.csv",
+    "section_token_counts.csv",
+    "currier_token_counts.csv",
+    "valid_groups_by_currier.csv",
+    "excluded_groups_by_currier.csv",
+    "within_currier_observed_distances.csv",
+    "within_currier_null_summary.csv",
+    "within_currier_null_summary.json",
+    "pairwise_within_currier_null_control.csv",
+    "pairwise_within_currier_null_control.json",
+    "signal_summary.csv",
+    "signal_summary.json",
+    "historical_comparison_summary.csv",
+    "unmapped_section_lines.csv",
+    "unmapped_currier_lines.csv",
+    "within_currier_null_iterations.csv",
+    "pairwise_within_currier_null_iterations.csv"
+  ]
+}

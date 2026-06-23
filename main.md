@@ -10,7 +10,7 @@ The goal is to create a durable research memory. The project should preserve obs
 
 ## Current Status
 
-Status: baseline, line-position, cleaned-parser, section-frequency, section-frequency resampling-control, section-label null-control, and Currier-section interaction-control experiments completed.
+Status: baseline, line-position, cleaned-parser, section-frequency, section-frequency resampling-control, section-label null-control, Currier-section interaction-control, and within-Currier section-label null-control experiments completed.
 
 Initial raw transcription source has been added for `exp-001`: `data/raw/LSI_ivtff_0d.txt`, documented in `datasets/voynich_sources.md` and `methods/transcription_policy.md`.
 
@@ -50,6 +50,7 @@ Initial hypotheses are open concepts, not conclusions.
 - `experiments/exp-004_section-frequency-resampling-control_active_2026-06-21/` - matched-token-count control completed for the `exp-003` section-frequency result.
 - `experiments/exp-005_section-label-null-control_active_2026-06-21/` - pooled-label null control completed for observed and matched section-frequency distances.
 - `experiments/exp-006_currier-section-interaction-control_active_2026-06-21/` - Currier-language interaction control completed; section and Currier are strongly confounded in the current metadata slice.
+- `experiments/exp-007_section-label-null-control-within-currier_active_2026-06-21/` - within-Currier section-label null control completed; valid section labels were above the tested null inside both Currier A and Currier B.
 
 ## Recent Important Decisions
 
@@ -62,11 +63,11 @@ Initial hypotheses are open concepts, not conclusions.
 - 2026-06-21: After `exp-004`, prefer pairwise matched-size JSD for pair-specific section comparison and keep common-size resampling as a global stress test.
 - 2026-06-21: After `exp-005`, prefer null-control comparisons over raw observed section JSD when evaluating whether section labels carry measurable information.
 - 2026-06-23: For `exp-006`, use IVTFF page-header `$L` labels as Currier metadata and treat blank, `?`, and `-` labels as unmapped for Currier-controlled comparisons.
+- 2026-06-23: After `exp-007`, treat section signal as still above the tested within-Currier null in valid groups, while keeping Currier coverage gaps and other metadata confounders unresolved.
 
 ## Next Steps
 
-- Recommended next experiment: `exp-007_section-label-null-control-within-currier`.
-- Purpose: test whether section-label effects remain stronger than random section-label assignment inside Currier A and inside Currier B separately.
-- Alternative / supporting task: `exp-007_currier-metadata-coverage-audit`, to audit the 752 blank Currier lines before further interaction controls.
+- Recommended next task: `exp-008_currier-metadata-coverage-audit`.
+- Purpose: audit the 752 blank Currier lines and sections without valid Currier-labeled tokens before broader source-of-signal controls.
 - Later follow-up: hand-section interaction control, matched-size within-Currier section resampling, and controls for line position, folio structure, and quire structure.
 - Add verified sources for manuscript background notes.

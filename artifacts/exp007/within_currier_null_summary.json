@@ -1,0 +1,34 @@
+[
+  {
+    "currier_language": "A",
+    "valid_section_count": 3,
+    "valid_sections": "herbal;pharmaceutical;text",
+    "observed_mean_jsd_bits": 0.5355956685429015,
+    "null_mean_jsd_mean_bits": 0.38805169568795816,
+    "null_mean_jsd_std_bits": 0.0055697390695394955,
+    "null_mean_jsd_median_bits": 0.3879099799087588,
+    "null_mean_jsd_q025_bits": 0.37747830673375826,
+    "null_mean_jsd_q975_bits": 0.39941216554950554,
+    "observed_minus_null_mean_bits": 0.14754397285494336,
+    "empirical_percentile": 1.0,
+    "empirical_p_value": 0.000999000999000999,
+    "conclusion_label": "above_null_97_5",
+    "signal_label": "section_signal_above_null_within_currier"
+  },
+  {
+    "currier_language": "B",
+    "valid_section_count": 5,
+    "valid_sections": "biological;cosmological;herbal;stars;text",
+    "observed_mean_jsd_bits": 0.46397711540843006,
+    "null_mean_jsd_mean_bits": 0.3449325698805918,
+    "null_mean_jsd_std_bits": 0.004246063198320629,
+    "null_mean_jsd_median_bits": 0.34494051164064166,
+    "null_mean_jsd_q025_bits": 0.33619693237799836,
+    "null_mean_jsd_q975_bits": 0.35311149369219175,
+    "observed_minus_null_mean_bits": 0.11904454552783827,
+    "empirical_percentile": 1.0,
+    "empirical_p_value": 0.000999000999000999,
+    "conclusion_label": "above_null_97_5",
+    "signal_label": "section_signal_above_null_within_currier"
+  }
+]

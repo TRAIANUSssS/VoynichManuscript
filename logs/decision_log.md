@@ -265,3 +265,31 @@ Do not treat the section-level signal as independent of Currier, and do not trea
 
 Open questions:
 Whether `exp-007_currier-metadata-coverage-audit` should precede the null-control experiment to resolve or better document the 752 blank Currier lines.
+
+## 2026-06-23 - Treat exp-007 as within-Currier null evidence only
+
+Decision:
+Treat `exp-007` as evidence that valid IVTFF `$I` section groups remain above the tested section-label null model inside both Currier A and Currier B, but not as evidence of meaning, language identity, or independence from all metadata confounders.
+
+Reason:
+Both Currier A and Currier B observed mean section-pair JSD values were above their 97.5% within-Currier null quantiles. However, Currier A has only three valid section groups, 752 selected lines still have blank Currier labels, and no hand, quire, folio, layout, line-position, or alternate-transcription controls were applied.
+
+Consequences:
+Future summaries may state that Currier A/B composition alone does not fully explain the tested section signal among valid groups, but they must continue to describe the source of the remaining signal as unresolved.
+
+Open questions:
+How much of the remaining signal is explained by hand, quire, folio, layout, line position, transcription policy, or unresolved Currier metadata coverage.
+
+## 2026-06-23 - Prioritize Currier metadata coverage audit after exp-007
+
+Decision:
+Use `exp-008_currier-metadata-coverage-audit` as the recommended next task before broader source-of-signal interpretation.
+
+Reason:
+`exp-007` still excludes 752 selected lines with blank Currier labels, and `astronomical` and `zodiac` have no valid Currier-labeled tokens under the current mapping. Auditing this coverage gap should clarify whether the missing labels are irreducible source metadata limits or can be documented more precisely from cited sources.
+
+Consequences:
+Hand-section and layout/quire controls remain important follow-ups, but Currier coverage should be audited before treating the current within-Currier scope as final.
+
+Open questions:
+Whether a cited external or source-derived metadata reference can resolve any blank Currier labels without guessing.

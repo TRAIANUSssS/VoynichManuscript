@@ -385,3 +385,20 @@ Alternative / supporting task:
 
 Purpose:
 Audit the 752 blank Currier lines and check whether Currier coverage can be improved or documented more precisely before further interaction controls.
+
+## 2026-06-23 - exp-007 within-Currier section-label null control
+
+Context:
+`exp-006` found that section and Currier metadata are strongly confounded. `exp-007` tested whether section labels remain stronger than random section-label reassignment inside Currier A and inside Currier B separately.
+
+What was done:
+Added `scripts/exp007_section_label_null_control_within_currier.py`, ran it on `data/raw/LSI_ivtff_0d.txt` with transcriber code `H`, reused `data/metadata/folio_sections.csv` and `data/metadata/folio_currier.csv`, and generated artifacts under `artifacts/exp007/`. Created the active `exp-007` experiment folder with protocol, results, findings, artifact index, and questions.
+
+Results:
+The run selected 5,216 `H` lines. All selected lines mapped to sections, 4,464 mapped to valid Currier labels, and 752 had blank Currier labels. Currier A had 3 valid section groups and observed mean section-pair JSD `0.5355956685429015`, above its null 97.5% quantile `0.39941216554950554`. Currier B had 5 valid section groups and observed mean section-pair JSD `0.46397711540843006`, above its null 97.5% quantile `0.35311149369219175`. All 13 valid pairwise within-Currier section comparisons were above their pairwise 97.5% null quantiles.
+
+Open questions:
+The result weakens the idea that Currier A/B composition fully explains the tested section signal among valid groups, but it does not identify the source of the remaining signal. Coverage remains limited by 752 blank Currier labels and by the absence of valid Currier-labeled `astronomical` and `zodiac` tokens.
+
+Next actions:
+Audit Currier metadata coverage before treating the current within-Currier scope as final, then test hand, quire, layout, line position, and matched-size within-Currier controls.

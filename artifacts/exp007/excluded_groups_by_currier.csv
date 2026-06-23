@@ -1,0 +1,9 @@
+currier_language,section,line_count,token_count,min_tokens_per_section,reason
+A,astronomical,0,0,100,zero_tokens
+A,biological,0,0,100,zero_tokens
+A,cosmological,0,0,100,zero_tokens
+A,stars,0,0,100,zero_tokens
+A,zodiac,0,0,100,zero_tokens
+B,astronomical,0,0,100,zero_tokens
+B,pharmaceutical,0,0,100,zero_tokens
+B,zodiac,0,0,100,zero_tokens

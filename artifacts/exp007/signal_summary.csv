@@ -1,0 +1,4 @@
+scope,currier_language,valid_section_count,valid_sections,observed_mean_jsd_bits,null_mean_jsd_bits,null_q975_bits,empirical_p_value,conclusion_label,signal_label
+currier,A,3,herbal;pharmaceutical;text,0.5355956685429015,0.38805169568795816,0.39941216554950554,0.000999000999000999,above_null_97_5,section_signal_above_null_within_currier
+currier,B,5,biological;cosmological;herbal;stars;text,0.46397711540843006,0.3449325698805918,0.35311149369219175,0.000999000999000999,above_null_97_5,section_signal_above_null_within_currier
+overall,all_valid_currier_categories,,,,,,,,section_signal_above_null_in_both_currier_groups

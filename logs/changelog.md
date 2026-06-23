@@ -102,3 +102,11 @@
 - Added a milestone-level `exp-006` consolidation summary in OBS/INF/HYP/TODO form.
 - Recorded Currier language as a strong confounder for section-frequency analysis without treating it as a complete explanation.
 - Recorded `exp-007_section-label-null-control-within-currier` as the recommended next experiment, with Currier metadata coverage audit as a supporting alternative.
+
+## 2026-06-23 - Ran exp-007 within-Currier section-label null control
+
+- Added `scripts/exp007_section_label_null_control_within_currier.py`.
+- Generated `artifacts/exp007/` within-Currier section-label null-control CSV and JSON outputs.
+- Created `experiments/exp-007_section-label-null-control-within-currier_active_2026-06-21/` with protocol, results, findings, artifact index, and questions.
+- Updated project navigation, script/artifact indexes, decision log, and session summary.
+- Preserved all earlier experiment directories and artifacts unchanged.

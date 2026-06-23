@@ -1,0 +1,9 @@
+currier_language,section,line_count,token_count,min_tokens_per_section,status
+A,herbal,1245,7925,100,valid
+A,pharmaceutical,456,2579,100,valid
+A,text,108,946,100,valid
+B,biological,917,6918,100,valid
+B,cosmological,153,1487,100,valid
+B,herbal,378,3445,100,valid
+B,stars,1083,10694,100,valid
+B,text,115,680,100,valid
